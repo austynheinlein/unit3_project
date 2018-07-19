@@ -14,6 +14,9 @@
 
   https://mighty-bayou-92141.herokuapp.com/
 
+## ERDs
+  ![ERDs](https://i.imgur.com/DcrhYdD.jpg "ERDs")
+
 ## Approach
 - [x] Make a New Repo and setup for Heroku Deployment
 - [x] Set up Trello
