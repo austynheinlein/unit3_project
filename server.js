@@ -6,7 +6,7 @@ const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/rentr_app
  const session = require('express-session');
  const bcryptjs = require('bcryptjs')
 
-<<<<<<< HEAD
+ 
  // JSON middleware
  app.use(express.json());
 
@@ -30,8 +30,6 @@ const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/rentr_app
 
  // const propertiesController = require('./controllers/properties.js');
  // app.use('/properties', propertiesController);
-=======
->>>>>>> aab4fc872df830b3f60cf2246393ea41ca94ddf4
 
  const port = process.env.PORT || 3000;
  app.listen(port);
