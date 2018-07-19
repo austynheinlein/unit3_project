@@ -10,9 +10,15 @@
 ## Description
   Rentr is an app for finding you the perfect apartment in your new city! You will be able to not only search for the perfect property, but store ones that catch your eye to your profile, or if you are looking to rent to someone: create a new listing! We will be utilizing the 7 RESTful routes in our full CRUD MEAN app.
 
-  It will include a model for Users, a model for Properties, and we will be pushing for AUTH as well. This app will be delpoyed on heroku at the link below:
+  It will include a model for Users, a model for Properties, and we will be pushing for AUTH as well. This app will be deployed on Heroku at the link below:
 
   https://mighty-bayou-92141.herokuapp.com/
+
+## Homepage
+  ![Index Page](https://ibb.co/hYKNgy "Home Page Wireframe")
+
+## User Login
+  ![User Page](https://ibb.co/kCGw8d "User Page Wireframe")
 
 ## ERDs
   ![ERDs](https://i.imgur.com/DcrhYdD.jpg "ERDs")
