@@ -27,8 +27,8 @@ const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/rentr_app
 
  // properties controller
 
- const propertiesController = require('./controllers/properties.js');
- app.use('/properties', propertiesController);
+ // const propertiesController = require('./controllers/properties.js');
+ // app.use('/properties', propertiesController);
 
  const port = process.env.PORT || 3000;
  app.listen(port);
