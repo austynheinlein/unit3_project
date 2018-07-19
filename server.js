@@ -3,6 +3,8 @@ const app = express();
 const mongoose = require('mongoose')
 const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/rentr_app';
  mongoose.connect(mongoUri);
+ const session = require('express-session');
+ const bcryptjs = require('bcryptjs')
 
  // JSON middleware
  app.use(express.json());
