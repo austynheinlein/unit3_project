@@ -24,4 +24,13 @@ router.delete('/:id', (req, res)=>{
 })
 
 
+// update
+router.put('/:id', (req, res)=>{
+  Property.findByIdAndUpdate(req.params.id, req.body, {return: true}, (err, updatedProperty)=>{
+    res.json(updatedProperty)
+  })
+
+})
+
+
 module.exports = router
