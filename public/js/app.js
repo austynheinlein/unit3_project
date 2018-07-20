@@ -3,7 +3,11 @@ const app = angular.module('MyApp', []);
 
 app.controller('MyController', ['$http', function($http){
   const controller = this;
-  this.funny = 'haha';
+  this.modal = false;
+  this.toggleModal = function(){
+    this.modal = !this.modal
+    console.log(this.modal)
+  }
 //GET USER
   this.getUser = function(){
     console.log('function working');
@@ -115,6 +119,7 @@ this.logOut = function(){
 
 /// Mouse-over logic
   this.chooseOneProperty = function(property){
+    console.log('hello')
       this.property = property;
       console.log(this.property._id)
     }
