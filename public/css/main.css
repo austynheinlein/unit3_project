@@ -80,6 +80,9 @@
   display: flex;
   justify-content: flex-end;
 }
+input:focus {
+  outline: none;
+}
 .login input[type=text], .user input[type=text], .login input[type=password], .user input[type=password] {
   border: 1px solid #313131;
   margin: 1px;
