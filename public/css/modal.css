@@ -1,6 +1,6 @@
 body {
   display: flex;
-  width: 1500px;
+  width: 100%;
   flex-direction: column;
   align-items: center;
 }
