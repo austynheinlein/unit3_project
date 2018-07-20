@@ -15,7 +15,20 @@ app.controller('MyController', ['$http', function($http){
     })
   }
 
-
+  this.deleteProperty = function(property){
+    console.log('delete clicked');
+    $http({
+        method:'DELETE',
+        url: '/properties/' + property._id
+    }).then(
+        function(response){
+            controller.getProperties();
+        },
+        function(error){
+          console.log(error);
+        }
+    );
+  }
 
   this.getProperties();
 }]);
