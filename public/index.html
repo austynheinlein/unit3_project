@@ -19,22 +19,31 @@
           <img src="./assets/rentr_icon.png" alt="house icon">
         </div>
         <div class="session">
-          <!-- CREATE USER -->
-            <h2>Create User</h2>
-            <form ng-submit='ctrl.createUser()'>
-              <input type="text" ng-model='ctrl.username'>
-              <input type="password" ng-model='ctrl.password'>
-              <input type="submit" value="Create User">
-            </form>
-          <!-- CREATE LOGIN -->
-            <h2>Log In</h2>
-            <form ng-submit='ctrl.logIn()'>
-              <input type="text" ng-model='ctrl.username'>
-              <input type="password" ng-model='ctrl.password'>
-              <input type="submit" value="Log In">
-            </form>
-          <!-- LOG OUT BUTTON -->
-            <button ng-click="ctrl.logOut()">Log Out</button>
+          <div class="create-login">
+            <div class="user">
+              <!-- CREATE USER -->
+                <h2>Create User</h2>
+                <form ng-submit='ctrl.createUser()'>
+                  <input type="text" ng-model='ctrl.username' placeholder="username">
+                  <input type="password" ng-model='ctrl.password'
+                  placeholder="password">
+                  <input type="submit" value="Create User">
+                </form>
+            </div>
+            <div class="login">
+              <!-- CREATE LOGIN -->
+                <h2>Log In</h2>
+                <form ng-submit='ctrl.logIn()'>
+                  <input type="text" ng-model='ctrl.username' placeholder="username">
+                  <input type="password" ng-model='ctrl.password' placeholder="password">
+                  <input type="submit" value="Log In">
+                </form>
+            </div>
+          </div>    
+          <div class="logout">
+            <!-- LOG OUT BUTTON -->
+              <button ng-click="ctrl.logOut()">Log Out</button>
+          </div>
         </div>
       </div>
 
