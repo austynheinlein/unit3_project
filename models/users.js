@@ -4,8 +4,8 @@ const Property = require('./properties.js')
 
 const usersSchema = new Schema({
   username: String,
-  password: String,
-  properties: [Property]
+  properties: [],
+  password: String
 })
 
 const User = mongoose.model('User', usersSchema)

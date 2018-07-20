@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const propertiesSchema = new Schema({
+  image: String,
   rent: Number,
   sqft: Number,
   address: String,
@@ -15,6 +16,14 @@ const propertiesSchema = new Schema({
   timestamps: true
 })
 
-const Property = mongoose.model('Property', propertiesSchema)
+const usersSchema = new Schema({
+  username: String,
+  password: String,
+  properties: [propertiesSchema]
+})
 
-module.exports = Property
+const Property = mongoose.model('Property', propertiesSchema)
+const User = mongoose.model('User', usersSchema)
+
+module.exports.User = User
+module.exports.Property = Property
