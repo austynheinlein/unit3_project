@@ -98,6 +98,7 @@ this.logOut = function(){
       }).then(function(response){
           controller.getProperties();
           controller.toggleCreateModal();
+          // console.log('hi')
       })
   }
 
