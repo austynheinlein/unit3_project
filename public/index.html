@@ -7,6 +7,7 @@
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
      <!-- LOCAL CSS -->
      <link rel="stylesheet" href="/css/main.css">
+     <link rel="stylesheet" href="/css/modal.css">
     <meta charset="utf-8">
     <title></title>
   </head>
@@ -30,10 +31,42 @@
     <input type="submit" value="Log In">
   </form>
 
+  <button ng-click="ctrl.toggleCreateModal()">Create a New Property</button>
+
   <button ng-click="ctrl.logOut()">Log Out</button>
 
-  <!-- CREATE PROPERTY FORM -->
+    <!-- EDIT PROPERTY FORM -->
+<div id="updateModal" ng-class="(ctrl.modal ? 'modalAppears' : 'modalDisappears')">
+  <h1>Update</h1>
+  <form ng-submit="ctrl.updateProperty(ctrl.property)">
+    <!-- {{ctrl.rent}} - {{ctrl.address}} -->
+    <br/>
+    <input type="text" ng-model="ctrl.image" placeholder="{{ctrl.property.image}}"/>
+    <br/>
+    <input type="text" ng-model="ctrl.rent" placeholder="{{ctrl.property.rent}}"/>
+    <br/>
+    <input type="text" ng-model="ctrl.sqft" placeholder="{{ctrl.property.sqft}}"/>
+    <br/>
+    <input type="text" ng-model="ctrl.beds" placeholder="{{ctrl.property.beds}}"/>
+    <br/>
+    <input type="text" ng-model="ctrl.baths" placeholder="{{ctrl.property.baths}}"/>
+    <br/>
+    <input type="text" ng-model="ctrl.address" placeholder="{{ctrl.property.address}}"/>
+    <br/>
+    <input type="text" ng-model="ctrl.city" placeholder="{{ctrl.property.city}}"/>
+    <br/>
+    <input type="text" ng-model="ctrl.state" placeholder="{{ctrl.property.state}}"/>
+    <br/>
+    <input type="text" ng-model="ctrl.zip" placeholder="{{ctrl.property.zip}}"/>
+    <br/>
+    <input type="submit" name="" value="CREATE"/>
+  </form>
+</div>
 
+
+
+  <!-- CREATE PROPERTY FORM -->
+<div id="createModal" ng-class="(ctrl.createModal ? 'modalAppears' : 'modalDisappears')">
     <form ng-submit="ctrl.createProperty()">
       {{ctrl.rent}} - {{ctrl.address}}
       <br/>
@@ -57,6 +90,7 @@
       <br/>
       <input type="submit" name="" value="CREATE"/>
     </form>
+  </div>
 
   <!-- DISPLAY LISTING AND DELETE FUNCTIONALITY -->
   <div ng-repeat="property in ctrl.properties">

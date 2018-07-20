@@ -4,10 +4,18 @@ const app = angular.module('MyApp', []);
 app.controller('MyController', ['$http', function($http){
   const controller = this;
   this.modal = false;
+
   this.toggleModal = function(){
     this.modal = !this.modal
     console.log(this.modal)
   }
+
+  this.createModal = false;
+
+  this.toggleCreateModal = function(){
+    this.createModal = !this.createModal
+  }
+
 //GET USER
   this.getUser = function(){
     console.log('function working');
@@ -89,6 +97,8 @@ this.logOut = function(){
           }
       }).then(function(response){
           controller.getProperties();
+          controller.toggleCreateModal();
+          // console.log('hi')
       })
   }
 
@@ -121,32 +131,33 @@ this.logOut = function(){
   this.chooseOneProperty = function(property){
     console.log('hello')
       this.property = property;
-      console.log(this.property._id)
+      console.log(this.property.image)
     }
 
 // Update logic
-    // this.updateProperty = function(property){
-    //   $http({
-    //     method: 'PUT',
-    //     url: '/properties/' + property._id,
-    //     data: {
-    //         image: this.image
-    //         rent: this.rent,
-    //         sqft: this.sqft,
-    //         address: this.address,
-    //         beds: this.beds,
-    //         baths: this.baths,
-    //         city: this.city,
-    //         state: this.state,
-    //         zip: this.zip
-    //     }
-    //   }).then(function(response){
-    //     console.log(response)
-    //     controller.getProperties()
-    //     console.log('hi')
-    //     console.log(response)
-    //   })
-    // }
+    this.updateProperty = function(property){
+      $http({
+        method: 'PUT',
+        url: '/properties/' + property._id,
+        data: {
+            image: this.image,
+            rent: this.rent,
+            sqft: this.sqft,
+            address: this.address,
+            beds: this.beds,
+            baths: this.baths,
+            city: this.city,
+            state: this.state,
+            zip: this.zip
+        }
+      }).then(function(response){
+        console.log(response)
+        controller.getProperties()
+        console.log('hi')
+        console.log(response)
+        controller.toggleModal();
+      })
+    }
 
   this.getProperties();
 }]);
