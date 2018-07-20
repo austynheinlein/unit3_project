@@ -24,8 +24,16 @@
 .icon {
   margin-left: 15px;
   margin-top: 12px;
+  background: rgba(255,255,255,.5);
+  width: 100px;
+  height: 100px;
+  border-radius: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .icon img {
+  display: flex;
   height: auto;
   width: 100px;
 }
@@ -39,10 +47,23 @@
   flex-direction: column;
   margin-right: 8px;
   margin-top: 10px;
+  margin-left: 15px;
 }
 .create-login {
   display: flex;
   flex-direction: row;
+}
+.user h2, .login h2 {
+  background: rgba(255,255,255,.5);
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-bottom: 2px;
+}
+.user h2 {
+  margin-right: 2px;
+}
+.login h2 {
+  margin-left: 2px;
 }
 .user, .login {
   text-align: center;
@@ -64,18 +85,28 @@
   margin: 1px;
 }
 .logout button {
-  width: 152px;
+  width: 150px;
 }
 .login input[type=submit], .user input[type=submit], .logout button {
   background: #313131;
   color: white;
-  border: none;
+  border: 1px solid #313131;
   margin: 1px;
 }
 .login input[type=submit]:hover, .user input[type=submit]:hover, .logout button:hover {
-  background: #575757;
+  background: #434343;
+  color: white;
+  border: 1px solid #eafb8a;
+}
+.new-prop button {
+  background: #313131;
   color: white;
   border: none;
+  width: 100%;
+  padding: 4px;
+}
+.new-prop button:hover {
+  color: #eafb8a;
 }
 h2 {
   font-size: 15px;
