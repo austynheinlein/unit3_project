@@ -15,120 +15,125 @@
     <div class="container">
       <div class="header">
         <!-- LOGO -->
-        <div class="logo">
-          <div class="icon">
-            <img src="public/assets/rentericon.png" alt="house icon">
-          </div>
-          <div class="rentr">
-            <h2>rentr</h2>
-          </div>
+        <div class="icon">
+          <a href="#"><img src="./assets/rentr_icon.png" alt="house icon"></a>
         </div>
         <div class="session">
-          <!-- CREATE USER -->
-            <h2>Create User</h2>
-            <form ng-submit='ctrl.createUser()'>
-              <input type="text" ng-model='ctrl.username'>
-              <input type="password" ng-model='ctrl.password'>
-              <input type="submit" value="Create User">
-            </form>
-          <!-- CREATE LOGIN -->
-          <h2>Log In</h2>
-          <form ng-submit='ctrl.logIn()'>
-            <input type="text" ng-model='ctrl.username'>
-            <input type="password" ng-model='ctrl.password'>
-            <input type="submit" value="Log In">
-          </form>
-          <!-- LOG OUT BUTTON -->
-          <button ng-click="ctrl.logOut()">Log Out</button>
+          <div class="create-login">
+            <div class="user">
+              <!-- CREATE USER -->
+                <h2>Create User</h2>
+                <form ng-submit='ctrl.createUser()'>
+                  <input type="text" ng-model='ctrl.username' placeholder="username">
+                  <input type="password" ng-model='ctrl.password'
+                  placeholder="password">
+                  <input type="submit" value="Create User">
+                </form>
+            </div>
+            <div class="login">
+              <!-- CREATE LOGIN -->
+                <h2>Log In</h2>
+                <form ng-submit='ctrl.logIn()'>
+                  <input type="text" ng-model='ctrl.username' placeholder="username">
+                  <input type="password" ng-model='ctrl.password' placeholder="password">
+                  <input type="submit" value="Log In">
+                </form>
+            </div>
+          </div>
+          <div class="logout">
+            <!-- LOG OUT BUTTON -->
+              <button ng-click="ctrl.logOut()">Log Out</button>
+          </div>
         </div>
       </div>
 
-  <!-- CREATE NEW PROP BUTTON -->
-<button ng-click="ctrl.toggleCreateModal()">Create a New Property</button>
+      <div class="new-prop">
+        <!-- CREATE NEW PROP BUTTON -->
+        <button ng-click="ctrl.toggleCreateModal()">Create a New Property</button>
+      </div>
 
-    <!-- EDIT PROPERTY FORM -->
-<div id="updateModal" ng-class="(ctrl.modal ? 'modalAppears' : 'modalDisappears')">
-  <h1>Update</h1>
-  <form ng-submit="ctrl.updateProperty(ctrl.property)">
-    <!-- {{ctrl.rent}} - {{ctrl.address}} -->
-    <br/>
-    <input type="text" ng-model="ctrl.image" placeholder="{{ctrl.property.image}}"/>
-    <br/>
-    <input type="text" ng-model="ctrl.rent" placeholder="{{ctrl.property.rent}}"/>
-    <br/>
-    <input type="text" ng-model="ctrl.sqft" placeholder="{{ctrl.property.sqft}}"/>
-    <br/>
-    <input type="text" ng-model="ctrl.beds" placeholder="{{ctrl.property.beds}}"/>
-    <br/>
-    <input type="text" ng-model="ctrl.baths" placeholder="{{ctrl.property.baths}}"/>
-    <br/>
-    <input type="text" ng-model="ctrl.address" placeholder="{{ctrl.property.address}}"/>
-    <br/>
-    <input type="text" ng-model="ctrl.city" placeholder="{{ctrl.property.city}}"/>
-    <br/>
-    <input type="text" ng-model="ctrl.state" placeholder="{{ctrl.property.state}}"/>
-    <br/>
-    <input type="text" ng-model="ctrl.zip" placeholder="{{ctrl.property.zip}}"/>
-    <br/>
-    <input type="submit" name="" value="CREATE"/>
-  </form>
-  <button ng-click="ctrl.toggleModal()">Cancel</button>
-</div>
+          <!-- EDIT PROPERTY FORM -->
+      <div id="updateModal" ng-class="(ctrl.modal ? 'modalAppears' : 'modalDisappears')">
+        <h1>Update</h1>
+        <form ng-submit="ctrl.updateProperty(ctrl.property)">
+          <!-- {{ctrl.rent}} - {{ctrl.address}} -->
+          <br/>
+          <input type="text" ng-model="ctrl.image" placeholder="{{ctrl.property.image}}"/>
+          <br/>
+          <input type="text" ng-model="ctrl.rent" placeholder="{{ctrl.property.rent}}"/>
+          <br/>
+          <input type="text" ng-model="ctrl.sqft" placeholder="{{ctrl.property.sqft}}"/>
+          <br/>
+          <input type="text" ng-model="ctrl.beds" placeholder="{{ctrl.property.beds}}"/>
+          <br/>
+          <input type="text" ng-model="ctrl.baths" placeholder="{{ctrl.property.baths}}"/>
+          <br/>
+          <input type="text" ng-model="ctrl.address" placeholder="{{ctrl.property.address}}"/>
+          <br/>
+          <input type="text" ng-model="ctrl.city" placeholder="{{ctrl.property.city}}"/>
+          <br/>
+          <input type="text" ng-model="ctrl.state" placeholder="{{ctrl.property.state}}"/>
+          <br/>
+          <input type="text" ng-model="ctrl.zip" placeholder="{{ctrl.property.zip}}"/>
+          <br/>
+          <input type="submit" name="" value="CREATE"/>
+        </form>
+        <button ng-click="ctrl.toggleModal()">Cancel</button>
+      </div>
 
+        <!-- CREATE PROPERTY FORM -->
+      <div id="createModal" ng-class="(ctrl.createModal ? 'modalAppears' : 'modalDisappears')">
+          <form ng-submit="ctrl.createProperty()">
+            {{ctrl.rent}} - {{ctrl.address}}
+            <br/>
+            <input type="text" ng-model="ctrl.image" placeholder="image url"/>
+            <br/>
+            <input type="text" ng-model="ctrl.rent" placeholder="rent"/>
+            <br/>
+            <input type="text" ng-model="ctrl.sqft" placeholder="sqft"/>
+            <br/>
+            <input type="text" ng-model="ctrl.beds" placeholder="beds"/>
+            <br/>
+            <input type="text" ng-model="ctrl.baths" placeholder="baths"/>
+            <br/>
+            <input type="text" ng-model="ctrl.address" placeholder="street address"/>
+            <br/>
+            <input type="text" ng-model="ctrl.city" placeholder="city"/>
+            <br/>
+            <input type="text" ng-model="ctrl.state" placeholder="state"/>
+            <br/>
+            <input type="text" ng-model="ctrl.zip" placeholder="zip"/>
+            <br/>
+            <input type="submit" name="" value="CREATE"/>
+          </form>
+          <button ng-click="ctrl.toggleCreateModal()">Cancel</button>
+        </div>
 
+        <!-- DISPLAY LISTING AND DELETE FUNCTIONALITY -->
+        <div class="propertyImages">
+          <div class="property" ng-repeat="property in ctrl.properties">
+            <ul>
+              <li>
+                <img src="{{property.image}}" alt="apartment image"/>
+              </li>
+              <li>
+                {{property.rent}}
+              </li>
+              <li>
+                {{property.address}}
+              </li>
+              <li>
+                {{property.city}}
+              </li>
+              <li>
+                {{property.state}}
+              </li>
+            <button ng-mouseover="ctrl.chooseOneProperty(property)" ng-click="ctrl.toggleModal()">Update Listing</button>
+            <button ng-click="ctrl.deleteProperty(property)">Delete This Listing</button>
 
-  <!-- CREATE PROPERTY FORM -->
-<div id="createModal" ng-class="(ctrl.createModal ? 'modalAppears' : 'modalDisappears')">
-    <form ng-submit="ctrl.createProperty()">
-      {{ctrl.rent}} - {{ctrl.address}}
-      <br/>
-      <input type="text" ng-model="ctrl.image" placeholder="image url"/>
-      <br/>
-      <input type="text" ng-model="ctrl.rent" placeholder="rent"/>
-      <br/>
-      <input type="text" ng-model="ctrl.sqft" placeholder="sqft"/>
-      <br/>
-      <input type="text" ng-model="ctrl.beds" placeholder="beds"/>
-      <br/>
-      <input type="text" ng-model="ctrl.baths" placeholder="baths"/>
-      <br/>
-      <input type="text" ng-model="ctrl.address" placeholder="street address"/>
-      <br/>
-      <input type="text" ng-model="ctrl.city" placeholder="city"/>
-      <br/>
-      <input type="text" ng-model="ctrl.state" placeholder="state"/>
-      <br/>
-      <input type="text" ng-model="ctrl.zip" placeholder="zip"/>
-      <br/>
-      <input type="submit" name="" value="CREATE"/>
-    </form>
-    <button ng-click="ctrl.toggleCreateModal()">Cancel</button>
-  </div>
+          </div>
+        </div>
 
-  <!-- DISPLAY LISTING AND DELETE FUNCTIONALITY -->
-  <div class="propertyImages">
-    <div class="property" ng-repeat="property in ctrl.properties">
-      <ul>
-        <li>
-          <img src="{{property.image}}" alt="apartment image"/>
-        </li>
-        <li>
-          {{property.rent}}
-        </li>
-        <li>
-          {{property.address}}
-        </li>
-        <li>
-          {{property.city}}
-        </li>
-        <li>
-          {{property.state}}
-        </li>
-      <button ng-mouseover="ctrl.chooseOneProperty(property)" ng-click="ctrl.toggleModal()">Update Listing</button>
-      <button ng-click="ctrl.deleteProperty(property)">Delete This Listing</button>
-
-    </div>
-  </div>
-    </div>
+    </div><!-- END CONTAINER DIV -->
   </body>
 </html>
