@@ -16,6 +16,21 @@ router.post('/', (req, res) => {
   })
 })
 
+
+// Seed Route
+
+/// Seed Route
+
+const seed = require('../models/seedproperties.js');
+
+router.get('/seed', (req, res) => {
+  // encrypts the given seed passwords
+  Property.create(seed, (err, createdProperties) => {
+    console.log(createdProperties);
+    res.json(createdProperties)
+  });
+});
+
 // delete
 router.delete('/:id', (req, res)=>{
   Property.findByIdAndRemove(req.params.id, (err, deletedProperty)=>{
