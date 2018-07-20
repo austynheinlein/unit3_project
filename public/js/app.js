@@ -50,7 +50,35 @@ app.controller('MyController', ['$http', function($http){
     );
   }
 
+/// Mouse-over logic
+  this.chooseOneProperty = function(property){
+      this.property = property;
+      console.log(this.property._id)
+    }
 
+// Update logic
+    // this.updateProperty = function(property){
+    //   $http({
+    //     method: 'PUT',
+    //     url: '/properties/' + property._id,
+    //     data: {
+    //         image: this.image
+    //         rent: this.rent,
+    //         sqft: this.sqft,
+    //         address: this.address,
+    //         beds: this.beds,
+    //         baths: this.baths,
+    //         city: this.city,
+    //         state: this.state,
+    //         zip: this.zip
+    //     }
+    //   }).then(function(response){
+    //     console.log(response)
+    //     controller.getProperties()
+    //     console.log('hi')
+    //     console.log(response)
+    //   })
+    // }
 
   this.getProperties();
 }]);
