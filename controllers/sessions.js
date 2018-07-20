@@ -1,7 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/users.js');
+<<<<<<< HEAD
 const bcrypt = require('bcryptjs');
+=======
+const bcrypt = require('bcrypt');
+>>>>>>> 3a068e219c6af2da31a36d08f512412c2f3ed043
 
 //Login /POST
 router.post('/',(req,res)=>{

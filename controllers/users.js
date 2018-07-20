@@ -24,4 +24,24 @@ router.post('/', (req, res)=>{
 });
 
 
+
+/// Delete user
+// delete
+router.delete('/:id', (req, res)=>{
+  User.findByIdAndRemove(req.params.id, (err, deletedUser)=>{
+    res.json(deletedUser)
+  })
+})
+
+/// Put password route
+router.put('/:id', (req, res)=>{
+  req.body.password = bcryptjs.hashSync(req.body.password,
+  bcryptjs.genSaltSync(10));
+  console.log(req.body.password)
+  User.findByIdAndUpdate(req.params.id, { $set: { password: req.body.password }}, { new: true }, (err, updatedProperty)=>{
+    res.json(updatedProperty)
+  })
+})
+
+
 module.exports = router
