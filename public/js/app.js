@@ -32,6 +32,24 @@ app.controller('MyController', ['$http', function($http){
     })
   }
 
+
+//Create Session (Log-in)
+
+this.logIn = function(){
+      $http({
+          method:'POST',
+          url:'/sessions',
+          data: {
+              username:this.username,
+              password:this.password
+          }
+        }).then(function(response){
+          controller.user = response.config.data.username
+            console.log(response);
+        })
+    }
+
+
 //CREATE PROPERTIES
   this.createProperty = function(){
       $http({
