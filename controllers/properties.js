@@ -16,5 +16,12 @@ router.post('/', (req, res) => {
   })
 })
 
+// delete
+router.delete('/:id', (req, res)=>{
+  Property.findByIdAndRemove(req.params.id, (err, deletedProperty)=>{
+    res.json(deletedProperty)
+  })
+})
+
 
 module.exports = router
