@@ -31,6 +31,8 @@
     <input type="submit" value="Log In">
   </form>
 
+  <button ng-click="ctrl.toggleCreateModal()">Create a New Property</button>
+
   <button ng-click="ctrl.logOut()">Log Out</button>
 
     <!-- EDIT PROPERTY FORM -->
@@ -64,7 +66,7 @@
 
 
   <!-- CREATE PROPERTY FORM -->
-
+<div id="createModal" ng-class="(ctrl.createModal ? 'modalAppears' : 'modalDisappears')">
     <form ng-submit="ctrl.createProperty()">
       {{ctrl.rent}} - {{ctrl.address}}
       <br/>
@@ -88,6 +90,7 @@
       <br/>
       <input type="submit" name="" value="CREATE"/>
     </form>
+  </div>
 
   <!-- DISPLAY LISTING AND DELETE FUNCTIONALITY -->
   <div ng-repeat="property in ctrl.properties">

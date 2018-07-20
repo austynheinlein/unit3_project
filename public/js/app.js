@@ -9,6 +9,13 @@ app.controller('MyController', ['$http', function($http){
     this.modal = !this.modal
     console.log(this.modal)
   }
+
+  this.createModal = false;
+
+  this.toggleCreateModal = function(){
+    this.createModal = !this.createModal
+  }
+
 //GET USER
   this.getUser = function(){
     console.log('function working');
@@ -90,6 +97,7 @@ this.logOut = function(){
           }
       }).then(function(response){
           controller.getProperties();
+          controller.toggleCreateModal();
       })
   }
 
