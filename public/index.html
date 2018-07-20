@@ -3,11 +3,21 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js" charset="utf-8"></script>
      <script src="./js/app.js" charset="utf-8"></script>
+     <!-- BootStrap -->
+     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+     <!-- LOCAL CSS -->
+     <link rel="stylesheet" href="/css/main.css">
     <meta charset="utf-8">
     <title></title>
   </head>
   <body ng-controller="MyController as ctrl">
 {{2+2}}
 {{ctrl.funny}}
+  <div ng-repeat="property in ctrl.properties">
+    {{property.rent}}
+    {{property.address}}
+    {{property.city}}
+    {{property.state}}
+  </div>
   </body>
 </html>

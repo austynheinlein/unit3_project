@@ -35,7 +35,7 @@ const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/rentr_app
  app.use('/users', usersController);
 
  //sessions controller
- const sessionsController = require('./controller/sessions.js');
+ const sessionsController = require('./controllers/sessions.js');
  app.use('/sessions', sessionsController);
 
  const port = process.env.PORT || 3000;
