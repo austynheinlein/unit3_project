@@ -18,9 +18,7 @@
   },
   "homepage": "https://github.com/austynheinlein/unit3_project#readme",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
     "express": "^4.16.3",
-    "express-session": "^1.15.6",
     "mongoose": "^5.2.4"
   }
 }
