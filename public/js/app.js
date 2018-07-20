@@ -50,6 +50,23 @@ this.logIn = function(){
     }
 
 
+/// Delete session
+
+this.logOut = function(){
+  console.log('delete clicked');
+  $http({
+      method:'DELETE',
+      url: '/sessions'
+  }).then(
+      function(response){
+        console.log(response)
+      },
+      function(error){
+        console.log(error);
+      }
+  );
+}
+
 //CREATE PROPERTIES
   this.createProperty = function(){
       $http({
