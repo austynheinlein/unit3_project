@@ -15,10 +15,10 @@
   https://mighty-bayou-92141.herokuapp.com/
 
 ## Homepage
-  ![Index Page](https://ibb.co/hYKNgy "Home Page Wireframe")
+  ![Index Page](https://image.ibb.co/nKpzTd/wireframe.jpg "Home Page Wireframe")
 
 ## User Login
-  ![User Page](https://ibb.co/kCGw8d "User Page Wireframe")
+  ![User Page](https://image.ibb.co/gyd9Td/wireframe_results.jpg "User Page Wireframe")
 
 ## ERDs
   ![ERDs](https://i.imgur.com/DcrhYdD.jpg "ERDs")
