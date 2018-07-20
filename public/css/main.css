@@ -1,0 +1,22 @@
+li img {
+  width: 100%;
+  height: auto;
+}
+
+.property {
+  width: 30%;
+  margin: 20px;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.propertyImages {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center
+}
