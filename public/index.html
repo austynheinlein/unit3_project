@@ -9,31 +9,42 @@
      <link rel="stylesheet" href="/css/main.css">
      <link rel="stylesheet" href="/css/modal.css">
     <meta charset="utf-8">
-    <title></title>
+    <title>RENTR</title>
   </head>
   <body ng-controller="MyController as ctrl">
-      {{2+2}}
-      {{ctrl.funny}}
+    <div class="container">
+      <div class="header">
+        <!-- LOGO -->
+        <div class="logo">
+          <div class="icon">
+            <img src="public/assets/rentericon.png" alt="house icon">
+          </div>
+          <div class="rentr">
+            <h2>rentr</h2>
+          </div>
+        </div>
+        <div class="session">
+          <!-- CREATE USER -->
+            <h2>Create User</h2>
+            <form ng-submit='ctrl.createUser()'>
+              <input type="text" ng-model='ctrl.username'>
+              <input type="password" ng-model='ctrl.password'>
+              <input type="submit" value="Create User">
+            </form>
+          <!-- CREATE LOGIN -->
+          <h2>Log In</h2>
+          <form ng-submit='ctrl.logIn()'>
+            <input type="text" ng-model='ctrl.username'>
+            <input type="password" ng-model='ctrl.password'>
+            <input type="submit" value="Log In">
+          </form>
+          <!-- LOG OUT BUTTON -->
+          <button ng-click="ctrl.logOut()">Log Out</button>
+        </div>
+      </div>
 
-  <!-- CREATE USER -->
-    <h2>Create User</h2>
-    <form ng-submit='ctrl.createUser()'>
-      <input type="text" ng-model='ctrl.username'>
-      <input type="password" ng-model='ctrl.password'>
-      <input type="submit" value="Create User">
-    </form>
-
-  <!-- CREATE LOGIN -->
-  <h2>Log In</h2>
-  <form ng-submit='ctrl.logIn()'>
-    <input type="text" ng-model='ctrl.username'>
-    <input type="password" ng-model='ctrl.password'>
-    <input type="submit" value="Log In">
-  </form>
-
-  <button ng-click="ctrl.toggleCreateModal()">Create a New Property</button>
-
-  <button ng-click="ctrl.logOut()">Log Out</button>
+  <!-- CREATE NEW PROP BUTTON -->
+<button ng-click="ctrl.toggleCreateModal()">Create a New Property</button>
 
     <!-- EDIT PROPERTY FORM -->
 <div id="updateModal" ng-class="(ctrl.modal ? 'modalAppears' : 'modalDisappears')">
@@ -118,5 +129,6 @@
 
     </div>
   </div>
+    </div>
   </body>
 </html>
