@@ -24,6 +24,22 @@ router.post('/', (req, res)=>{
 });
 
 
+/// Seed Route
+
+const seed = require('../models/seed.js');
+
+router.get('/seed', (req, res) => {
+  // encrypts the given seed passwords
+  seed.forEach((user) => {
+    user.password = bcryptjs.hashSync(user.password, bcryptjs.genSaltSync(10));
+  });
+  User.create(seed, (err, createdUsers) => {
+    console.log(createdUsers);
+    res.redirect('/');
+  });
+});
+
+
 
 /// Delete user
 // delete
