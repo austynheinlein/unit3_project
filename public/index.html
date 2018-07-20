@@ -13,15 +13,42 @@
   <body ng-controller="MyController as ctrl">
       {{2+2}}
       {{ctrl.funny}}
+  <!-- CREATE PROPERTY FORM -->
+
+    <form ng-submit="ctrl.createProperty()">
+      {{ctrl.rent}} - {{ctrl.address}}
+      <br/>
+      <input type="text" ng-model="ctrl.image" placeholder="image url"/>
+      <br/>
+      <input type="text" ng-model="ctrl.rent" placeholder="rent"/>
+      <br/>
+      <input type="text" ng-model="ctrl.sqft" placeholder="sqft"/>
+      <br/>
+      <input type="text" ng-model="ctrl.beds" placeholder="beds"/>
+      <br/>
+      <input type="text" ng-model="ctrl.baths" placeholder="baths"/>
+      <br/>
+      <input type="text" ng-model="ctrl.address" placeholder="street address"/>
+      <br/>
+      <input type="text" ng-model="ctrl.city" placeholder="city"/>
+      <br/>
+      <input type="text" ng-model="ctrl.state" placeholder="state"/>
+      <br/>
+      <input type="text" ng-model="ctrl.zip" placeholder="zip"/>
+      <br/>
+      <input type="submit" name="" value="CREATE"/>
+    </form>
+  
+  <!-- DISPLAY LISTING AND DELETE FUNCTIONALITY -->
   <div ng-repeat="property in ctrl.properties">
     {{property.rent}}
-    <br>
+    <br/>
     {{property.address}}
-    <br>
+    <br/>
     {{property.city}}
-    <br>
+    <br/>
     {{property.state}}
-    <br>
+    <br/>
     <button ng-click="ctrl.deleteProperty(property)">Delete This Listing</button>
 
   </div>
