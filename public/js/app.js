@@ -4,7 +4,35 @@ const app = angular.module('MyApp', []);
 app.controller('MyController', ['$http', function($http){
   const controller = this;
   this.funny = 'haha';
-//CREATE
+//GET USER
+  this.getUser = function(){
+    console.log('function working');
+    $http({
+      method: 'GET',
+      url: '/users'
+    }).then(function(response){
+      console.log(response);
+      controller.users = response.data
+    })
+  }
+
+//CREATE USER
+  this.createUser = function(){
+    console.log('function working');
+    $http({
+      method: 'POST',
+      url: '/users',
+      data: {
+        username: this.username,
+        password: this.password
+      }
+    }).then(function(response){
+      console.log(response);
+      controller.getUser()
+    })
+  }
+
+//CREATE PROPERTIES
   this.createProperty = function(){
       $http({
           method:'POST',

@@ -13,6 +13,15 @@
   <body ng-controller="MyController as ctrl">
       {{2+2}}
       {{ctrl.funny}}
+
+  <!-- CREATE USER -->
+    <h2>Create User</h2>
+    <form ng-submit='ctrl.createUser()'>
+      <input type="text" ng-model='ctrl.username'>
+      <input type="password" ng-model='ctrl.password'>
+      <input type="submit" value="Create User">
+    </form>
+
   <!-- CREATE PROPERTY FORM -->
 
     <form ng-submit="ctrl.createProperty()">
@@ -38,7 +47,7 @@
       <br/>
       <input type="submit" name="" value="CREATE"/>
     </form>
-  
+
   <!-- DISPLAY LISTING AND DELETE FUNCTIONALITY -->
   <div ng-repeat="property in ctrl.properties">
     {{property.rent}}
