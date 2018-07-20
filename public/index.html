@@ -38,7 +38,7 @@
       <br/>
       <input type="submit" name="" value="CREATE"/>
     </form>
-  
+
   <!-- DISPLAY LISTING AND DELETE FUNCTIONALITY -->
   <div ng-repeat="property in ctrl.properties">
     {{property.rent}}
@@ -50,7 +50,7 @@
     {{property.state}}
     <br/>
     <button ng-click="ctrl.deleteProperty(property)">Delete This Listing</button>
-
   </div>
+  
   </body>
 </html>
