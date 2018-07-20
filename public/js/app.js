@@ -14,6 +14,7 @@ app.controller('MyController', ['$http', function($http){
 
   this.toggleCreateModal = function(){
     this.createModal = !this.createModal
+    console.log(this.createModal)
   }
 
 //GET USER
