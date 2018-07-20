@@ -59,8 +59,23 @@
   display: flex;
   justify-content: flex-end;
 }
+.login input[type=text], .user input[type=text], .login input[type=password], .user input[type=password] {
+  border: 1px solid #313131;
+  margin: 1px;
+}
 .logout button {
   width: 152px;
+}
+.login input[type=submit], .user input[type=submit], .logout button {
+  background: #313131;
+  color: white;
+  border: none;
+  margin: 1px;
+}
+.login input[type=submit]:hover, .user input[type=submit]:hover, .logout button:hover {
+  background: #575757;
+  color: white;
+  border: none;
 }
 h2 {
   font-size: 15px;
