@@ -22,6 +22,14 @@
       <input type="submit" value="Create User">
     </form>
 
+  <!-- CREATE LOGIN -->
+  <h2>Log In</h2>
+  <form ng-submit='ctrl.logIn()'>
+    <input type="text" ng-model='ctrl.username'>
+    <input type="password" ng-model='ctrl.password'>
+    <input type="submit" value="Log In">
+  </form>
+  
   <!-- CREATE PROPERTY FORM -->
 
     <form ng-submit="ctrl.createProperty()">
