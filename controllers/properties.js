@@ -47,5 +47,17 @@ router.put('/:id', (req, res)=>{
 
 })
 
-
+//NAV ROUTES
+//by city
+router.get('/washingtondc',(req,res)=>{
+    Property.find({city: {$in: ['Washington']}},null, {sort: {name: 1}}, (err, showProp)=>{
+      res.json(showProp);
+    });
+});
+//by state
+router.get('/florida',(req,res)=>{
+    Property.find({state: {$in: ['Florida']}},null, {sort: {name: 1}}, (err, showProp)=>{
+      res.json(showProp);
+    });
+});
 module.exports = router
