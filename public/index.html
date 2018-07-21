@@ -68,7 +68,7 @@
     </form>
     <button ng-click="ctrl.toggleCreateModal()">Cancel</button>
     </div>
-    <div class="container">
+    <div class="container" ng-if="ctrl.noModal">
       <!-- LOGO --><!-- CREATE USER --><!-- CREATE LOGIN --><!-- LOG OUT BUTTON -->
       <div class= "header" ng-include="'partials/header.html'"></div>
 
