@@ -8,12 +8,14 @@ app.controller('MyController', ['$http', function($http){
   this.toggleModal = function(){
     this.modal = !this.modal
     console.log(this.modal)
+    this.noModal = !this.noModal
   }
 
   this.createModal = false;
 
   this.toggleCreateModal = function(){
     this.createModal = !this.createModal
+    this.noModal = !this.noModal
     console.log(this.createModal)
   }
 
@@ -172,6 +174,8 @@ this.logOut = function(){
     this.toggleShow = function(property){
       this.show = !this.show
     }
+
+    this.noModal = true;
 
   this.getProperties();
 }]);
