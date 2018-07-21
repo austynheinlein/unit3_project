@@ -1,0 +1,17 @@
+<div class="">
+  <label for="Search by">
+	<input type='text' placeholder='Beds' ng-model='searchBox'>
+  <input type='text' placeholder='Baths' ng-model='searchBox'>
+  <input type='text' placeholder='City' ng-model='searchBox'>
+  <input type='text' placeholder='State' ng-model='searchBox'>
+</label>
+<ul>
+	<li ng-repeat="property in ctrl.properties| filter: searchBox">{{ propert.address}} :<span> {{property.rent | currency}}</span></li>
+</ul>
+
+</div>
+
+
+
+<!-- FOR INDEX.HTML -->
+<!-- <div ng-include="'/partials/search.html'"></div> -->
