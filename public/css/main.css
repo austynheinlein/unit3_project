@@ -105,8 +105,17 @@ input:focus {
   background: #313131;
   color: white;
   border: none;
+  padding: 2px;
+}
+.new-prop{
   width: 100%;
+  background: #313131;
+  color: white;
+  border: none;
   padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .new-prop button:hover {
   color: #eafb8a;
@@ -115,14 +124,17 @@ h2 {
   font-size: 15px;
 }
 
-li img {
-  width: 100%;
-  height: auto;
-}
+/*********************************/
+/* property images */
+/*********************************/
 
-.property {
-  width: 30%;
-  margin: 20px;
+.propertyImages {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
 }
 ul {
   display: flex;
@@ -130,10 +142,28 @@ ul {
   align-items: center;
   padding-left: 0;
   list-style-type: none;
+  margin: 20px;
 }
-
-.propertyImages {
+li img {
+  width: 200px;
+  height: 200px;
+}
+.belowImg {
+  margin-top: 5px;
+  width: 100%;
+}
+.propertyData li {
+  height: 18px;
+}
+.buttons {
+  margin-top: 7px;
   display: flex;
-  flex-flow: wrap;
-  justify-content: center
+  justify-content: space-between;
+}
+.myButton {
+  font-size: 10px;
+  background: #313131;
+  color: white;
+  border: 1px solid #313131;
+  width: 95px;
 }
