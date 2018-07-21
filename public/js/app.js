@@ -160,5 +160,18 @@ this.logOut = function(){
       })
     }
 
+    // Click for show page
+
+    this.chooseOneShowProperty = function(property){
+        this.property = property;
+       console.log(this.property.image)
+      }
+
+    this.show = false;
+
+    this.toggleShow = function(property){
+      this.show = !this.show
+    }
+
   this.getProperties();
 }]);
