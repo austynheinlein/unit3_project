@@ -84,8 +84,9 @@ input:focus {
   outline: none;
 }
 .login input[type=text], .user input[type=text], .login input[type=password], .user input[type=password] {
-  border: 1px solid #313131;
+  border: none;
   margin: 1px;
+  padding-left: 5px;
 }
 .logout button {
   width: 150px;
@@ -135,6 +136,7 @@ h2 {
   justify-content: center;
   width: 100%;
   margin-top: 40px;
+  margin-bottom: 40px;
 }
 ul {
   display: flex;
@@ -147,6 +149,10 @@ ul {
 li img {
   width: 200px;
   height: 200px;
+  border: 2px solid white;
+}
+li img:hover {
+  border: 2px solid #eafb8a;
 }
 .belowImg {
   margin-top: 5px;
@@ -161,9 +167,37 @@ li img {
   justify-content: space-between;
 }
 .myButton {
-  font-size: 10px;
+  font-size: 12px;
   background: #313131;
   color: white;
   border: 1px solid #313131;
   width: 95px;
+}
+.myButton:hover {
+  cursor: pointer;
+  color: #eafb8a;
+}
+
+/*********************************/
+/* footer */
+/*********************************/
+
+.footer {
+  width: 100%;
+  background: #313131;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.devs, .ga, .info {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 20px 40px;
+}
+.devs a, .ga a, .info a {
+  color: #eafb8a;
+}
+.devs a:hover, .ga a:hover, .info a:hover {
+  color: #97a066;
 }
