@@ -1,0 +1,35 @@
+
+  <!-- LOGO -->
+  <div class="icon">
+    <a href="#"><img src="./assets/rentr_icon.png" alt="house icon"></a>
+  </div>
+  <div class="session">
+    <div class="create-login">
+      <div class="user">
+        <!-- CREATE USER -->
+          <h2>Create User</h2>
+          <form ng-submit='ctrl.createUser()'>
+            <input type="text" ng-model='ctrl.username' placeholder="username">
+            <input type="password" ng-model='ctrl.password'
+            placeholder="password">
+            <input type="submit" value="Create User">
+          </form>
+      </div>
+      <div class="login">
+        <!-- CREATE LOGIN -->
+          <h2>Log In</h2>
+          <form ng-submit='ctrl.logIn()'>
+            <input type="text" ng-model='ctrl.username' placeholder="username">
+            <input type="password" ng-model='ctrl.password' placeholder="password">
+            <input type="submit" value="Log In">
+          </form>
+      </div>
+    </div>
+    <div class="logout">
+      <!-- LOG OUT BUTTON -->
+        <button ng-click="ctrl.logOut()">Log Out</button>
+    </div>
+  </div>
+
+<!-- FOR INDEX.HTML -->
+<!-- <div class= "header" ng-include=" 'partials/header.html'"></div> -->
