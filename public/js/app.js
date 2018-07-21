@@ -135,6 +135,14 @@ this.logOut = function(){
       console.log(this.property.image)
     }
 
+
+    // Click for show page
+
+    this.chooseOneShowProperty = function(property){
+        this.property = property;
+        console.log(this.property.image)
+      }
+
 // Update logic
     this.updateProperty = function(property){
       $http({
@@ -158,6 +166,12 @@ this.logOut = function(){
         console.log(response)
         controller.toggleModal();
       })
+    }
+
+    this.show = false;
+
+    this.toggleShow = function(property){
+      this.show = !this.show
     }
 
   this.getProperties();
