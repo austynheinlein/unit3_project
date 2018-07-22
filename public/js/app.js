@@ -135,17 +135,9 @@ this.logOut = function(){
       console.log(this.property.image)
     }
 
-
-    // Click for show page
-
-    this.chooseOneShowProperty = function(property){
-        this.property = property;
-        console.log(this.property.image)
-      }
-
-// Update logic
-    this.updateProperty = function(property){
-      $http({
+      /// Update Property
+this.updateProperty = function(property){
+$http({
         method: 'PUT',
         url: '/properties/' + property._id,
         data: {
@@ -173,6 +165,5 @@ this.logOut = function(){
     this.toggleShow = function(property){
       this.show = !this.show
     }
-
   this.getProperties();
 }]);

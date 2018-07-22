@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const {Property} = require('../models/properties.js')
+const {User} = require('../models/properties.js')
 
 //get
 router.get('/', (req, res) => {
@@ -46,6 +47,17 @@ router.put('/:id', (req, res)=>{
   })
 
 })
+
+router.put('/:id/like', (req, res)=>{
+  Property.findById(req.params.id, (err, foundProperty)=>{
+    console.log(foundProperty)
+    let property = foundProperty;
+    User.findByIdAndUpdate( req.session.currentUser._id, {$push: {properties: property}}, (err, updatedUser)=>{
+      res.json(updatedUser)
+      console.log(updatedUser)
+  })
+  });
+});
 
 
 module.exports = router

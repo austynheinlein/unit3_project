@@ -7,5 +7,9 @@
   <li>Beds: {{ctrl.property.beds}}</li>
   <li>Baths: {{ctrl.property.baths}}</li>
   <li><img src="{{ctrl.property.image}}"/></li>
-
+  {{ctrl.property.zip}}  </li>
+  <li>Beds: {{ctrl.property.beds}}</li>
+  <li>Baths: {{ctrl.property.baths}}</li>
+  <li><img src="{{ctrl.property.image}}"/></li>
+  <button ng-if="ctrl.loggedIn" ng-click="ctrl.likeProperty(ctrl.property)">Like this property</button>
 </ul>
