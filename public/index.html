@@ -102,8 +102,8 @@
                     {{property.state}}
                   </li>
                 </div>
-                <div class="buttons">
-                  <button class="myButton" ng-mouseover="ctrl.chooseOneProperty(property)" ng-click="ctrl.toggleModal()">Update Listing</button>
+                <div ng-if="ctrl.loggedIn" class="buttons">
+                  <button class="myButton" ng-click="ctrl.chooseOneProperty(property) ; ctrl.toggleModal()">Update Listing</button>
                   <button  class="myButton" ng-click="ctrl.deleteProperty(property)">Delete Listing</button>
                 </div>
               </div>

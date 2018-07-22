@@ -4,6 +4,7 @@ const app = angular.module('MyApp', []);
 app.controller('MyController', ['$http', function($http){
   const controller = this;
   this.modal = false;
+  this.loggedIn = false;
 
   this.toggleModal = function(){
     this.modal = !this.modal
@@ -60,6 +61,7 @@ this.logIn = function(){
               properties: []
           }
         }).then(function(response){
+          controller.loggedIn = !controller.loggedIn
           controller.userdata = response
           controller.user = response.config.data.username
             console.log(response);
@@ -76,6 +78,7 @@ this.logOut = function(){
       url: '/sessions'
   }).then(
       function(response){
+        controller.loggedIn = !controller.loggedIn
         console.log(response)
       },
       function(error){

@@ -52,7 +52,7 @@ router.put('/:id/like', (req, res)=>{
   Property.findById(req.params.id, (err, foundProperty)=>{
     console.log(foundProperty)
     let property = foundProperty;
-    User.findByIdAndUpdate( req.session.currentUser._id, {return: true}, {$push: {properties: property}}, (err, updatedUser)=>{
+    User.findByIdAndUpdate( req.session.currentUser._id, {$push: {properties: property}}, (err, updatedUser)=>{
       res.json(updatedUser)
       console.log(updatedUser)
   })
