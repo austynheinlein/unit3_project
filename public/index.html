@@ -96,12 +96,14 @@
                   </li>
                 </div>
                 <div class="buttons">
-                  <button class="myButton" ng-mouseover="ctrl.chooseOneProperty(property)" ng-click="ctrl.toggleModal()">Update Listing</button>
-                  <button  class="myButton" ng-click="ctrl.deleteProperty(property)">Delete Listing</button>
+                  <button ng-if="ctrl.loggedIn" class="myButton" ng-mouseover="ctrl.chooseOneProperty(property)" ng-click="ctrl.toggleModal()">Update Listing</button>
+                  <button ng-if="ctrl.loggedIn"  class="myButton" ng-click="ctrl.deleteProperty(property)">Delete Listing</button>
                 </div>
               </div>
           </div>
         </div>
+        <div ng-if="ctrl.show" ng-include="'partials/showpage.html'">
+          </div>
         <!-- FOOTER -->
         <div class="footer">
           <div class="devs">
@@ -120,9 +122,7 @@
             <a href="#">Contact</a>
             <a href="#">Careers</a>
           </div>
-          <div ng-if="ctrl.show" ng-include="'partials/showpage.html'">
           </div>
-        </div>
-    </div><!-- END CONTAINER DIV -->
+        </div><!-- END CONTAINER DIV -->
   </body>
 </html>

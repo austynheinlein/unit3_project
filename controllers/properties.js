@@ -48,54 +48,16 @@ router.put('/:id', (req, res)=>{
 
 })
 
-
-//NAV ROUTES
-//by city
-router.get('/stpetersburg',(req,res)=>{
-    Property.find({city: {$in: ['St. Petersburg']}},null, {sort: {name: 1}}, (err, showProp)=>{
-      res.json(showProp);
-    });
-});
-router.get('/seattle',(req,res)=>{
-    Property.find({city: {$in: ['Seattle']}},null, {sort: {name: 1}}, (err, showProp)=>{
-      res.json(showProp);
-    });
-});
-
-router.get('/portland',(req,res)=>{
-    Property.find({city: {$in: ['Portland']}},null, {sort: {name: 1}}, (err, showProp)=>{
-      res.json(showProp);
-    });
-});
-//by state
-router.get('/florida',(req,res)=>{
-    Property.find({state: {$in: ['Florida']}},null, {sort: {name: 1}}, (err, showProp)=>{
-      res.json(showProp);
-    });
-});
-router.get('/maine',(req,res)=>{
-    Property.find({state: {$in: ['Maine']}},null, {sort: {name: 1}}, (err, showProp)=>{
-      res.json(showProp);
-    });
-});
-router.get('/washington',(req,res)=>{
-    Property.find({state: {$in: ['Washington']}},null, {sort: {name: 1}}, (err, showProp)=>{
-      res.json(showProp);
-    });
-});
-
-
 router.put('/:id/like', (req, res)=>{
- Property.findById(req.params.id, (err, foundProperty)=>{
-   console.log(foundProperty)
-   let property = foundProperty;
-   User.findByIdAndUpdate( req.session.currentUser._id, {$push: {properties: property}}, (err, updatedUser)=>{
-     res.json(updatedUser)
-     console.log(updatedUser)
- })
- });
+  Property.findById(req.params.id, (err, foundProperty)=>{
+    console.log(foundProperty)
+    let property = foundProperty;
+    User.findByIdAndUpdate( req.session.currentUser._id, {$push: {properties: property}}, (err, updatedUser)=>{
+      res.json(updatedUser)
+      console.log(updatedUser)
+  })
+  });
 });
-
 
 
 module.exports = router
