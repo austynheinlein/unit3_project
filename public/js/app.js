@@ -187,7 +187,7 @@ this.logOut = function(){
 
 //===================================================
 
-    this.byStateProperty = function(property){
+    this.getByStateProperty = function(property){
       $http({
         method: 'GET',
         url: '/properties/' + property.state,
@@ -196,7 +196,7 @@ this.logOut = function(){
       })
     }
 
-    this.byCityProperty = function(property){
+    this.getByCityProperty = function(property){
       $http({
         method: 'GET',
         url: '/properties/' + property.city,
