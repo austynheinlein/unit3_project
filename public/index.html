@@ -8,7 +8,7 @@
      <!-- LOCAL CSS -->
      <link rel="stylesheet" href="/css/main.css">
      <link rel="stylesheet" href="/css/modal.css">
-     <!-- <link rel="stylesheet" href="/css/nav.css"> -->
+     <link rel="stylesheet" href="/css/nav.css">
      <style media="screen">
        img{
          max-width: 300px;
@@ -21,6 +21,9 @@
     <div class="container">
       <!-- LOGO --><!-- CREATE USER --><!-- CREATE LOGIN --><!-- LOG OUT BUTTON -->
       <div class= "header" ng-include="'partials/header.html'"></div>
+      <div class="" ng-include="'partials/search.html'">
+
+      </div>
 
     <!-- EDIT PROPERTY FORM -->
     <div id="updateModal" ng-class="(ctrl.modal ? 'modalAppears' : 'modalDisappears')">
@@ -139,8 +142,7 @@
       </div>
 
     <!-- Show page Below  -->
-      <div ng-if="ctrl.show" ng-include="'partials/showpage.html'">
-      </div>
+      <div ng-if="ctrl.show" ng-include="'partials/showpage.html'"></div>
 </div><!-- END CONTAINER DIV -->
 
         <!-- FOOTER -->
@@ -163,7 +165,7 @@
             <a href="#">Contact</a>
             <a href="#">Careers</a>
           </div>
-        
+
           </div>
         </div>
 
