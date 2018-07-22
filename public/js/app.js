@@ -4,6 +4,7 @@ const app = angular.module('MyApp', []);
 app.controller('MyController', ['$http', function($http){
   const controller = this;
   this.modal = false;
+  this.loggedIn = false;
 
   this.toggleModal = function(){
     this.modal = !this.modal
@@ -56,9 +57,11 @@ this.logIn = function(){
           url:'/sessions',
           data: {
               username:this.username,
-              password:this.password
+              password:this.password,
+              properties: []
           }
         }).then(function(response){
+          controller.loggedIn = !controller.loggedIn
           controller.userdata = response
           controller.user = response.config.data.username
             console.log(response);
@@ -75,6 +78,7 @@ this.logOut = function(){
       url: '/sessions'
   }).then(
       function(response){
+        controller.loggedIn = !controller.loggedIn
         console.log(response)
       },
       function(error){
@@ -139,14 +143,19 @@ this.logOut = function(){
     }
 
 // Push one property into the user
-    // this.likeProperty = function(property){
-    //   $http({
-    //     method: 'PUT',
-    //     url: '/properties/' + property._id + '/like/'
-    //   }).then(function(response){
-    //     console.log(response)
-    //   })
-    // }
+    this.likeProperty = function(property){
+      $http({
+        method: 'put',
+        url: '/properties/' + property._id + '/like',
+        data: {
+          property: property
+        }
+      }).then(function(response){
+        console.log(response)
+      }, function(error){
+        console.log(error)
+      })
+    }
 
     // Update logic
         this.updateProperty = function(property){
