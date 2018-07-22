@@ -2,6 +2,11 @@
 /* * {
   border: 1px solid red;
 } */
+
+span {
+  font-size: 14px;
+  font-weight: lighter;
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -203,4 +208,55 @@ li img:hover {
 }
 .devs a:hover, .ga a:hover, .info a:hover {
   color: #97a066;
+}
+
+/*********************************/
+/* modal */
+/*********************************/
+.createFields {
+  border: 5px solid #313131;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+}
+.modalBtns {
+  display: flex;
+  justify-content: center;
+}
+.modalBtns input[type=submit]{
+  display: flex;
+  margin: 8px 0px;
+  width: 100px;
+  justify-content: center;
+  background: #313131;
+  color: white;
+  border: 1px solid #313131;
+}
+.modalBtns button {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  background: #313131;
+  color: white;
+  border: 1px solid #313131;
+}
+.modalBtns button:hover, .modalBtns input[type=submit]:hover {
+  color: #eafb8a;
+  border: 1px solid #eafb8a;
+}
+.iconModal {
+  margin-top: 12px;
+  background: rgba(255,255,255,.5);
+  width: 100px;
+  height: 100px;
+  border-radius: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iconModal img {
+  display: flex;
+  height: auto;
+  width: 100px;
 }
