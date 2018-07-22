@@ -81,15 +81,13 @@
     </form>
     <button ng-click="ctrl.toggleCreateModal()">Cancel</button>
     </div>
+
     <div class="container" ng-if="ctrl.noModal">
-
-
 
       <div class="new-prop">
         <!-- CREATE NEW PROP BUTTON -->
         <button ng-click="ctrl.toggleCreateModal()">Create a New Property</button>
       </div>
-
 
         <!-- DISPLAY LISTING AND DELETE FUNCTIONALITY -->
         <div class="propertyImages">
@@ -100,17 +98,28 @@
                   <img src="{{property.image}}" alt="apartment image"/>
                 </div>
               </li>
-              <li>
-                {{property.rent}}
-              </li>
-              <li>
-                {{property.address}}
-              </li>
-              <li>
-                {{property.city}}
-              </li>
-              <li>
-                {{property.state}}
+
+              <div class="belowImg">
+                <div class="propertyData">
+                  <li>
+                    {{property.rent}}
+                  </li>
+                  <li>
+                    {{property.address}}
+                  </li>
+                  <li>
+                    {{property.city}}
+                  </li>
+                  <li>
+                    {{property.state}}
+                  </li>
+                </div>
+
+                <div ng-if="ctrl.loggedIn" class="buttons">
+                  <button class="myButton" ng-click="ctrl.chooseOneProperty(property) ; ctrl.toggleModal()">Update Listing</button>
+                  <button  class="myButton" ng-click="ctrl.deleteProperty(property)">Delete Listing</button>
+                </div>
+              </div>
                 <!-- <div class="propertyImg">
                   <div ng-click="ctrl.toggleShow(); ctrl.chooseOneShowProperty(property)" class="propertyImg">
                 <img src="{{property.image}}" alt="apartment image"/>
@@ -131,15 +140,10 @@
                     {{property.state}}
                   </li>
                 </div> -->
-                <div ng-if="ctrl.loggedIn" class="buttons">
-                  <button class="myButton" ng-click="ctrl.chooseOneProperty(property) ; ctrl.toggleModal()">Update Listing</button>
-                  <button  class="myButton" ng-click="ctrl.deleteProperty(property)">Delete Listing</button>
-                </div>
-              </div>
           </div>
         </div>
-        </div>
       </div>
+    </div>
 
     <!-- Show page Below  -->
       <div ng-if="ctrl.show" ng-include="'partials/showpage.html'"></div>
