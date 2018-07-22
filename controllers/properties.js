@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const {Property} = require('../models/properties.js')
+const {User} = require('../models/properties.js')
 
 //get
 router.get('/', (req, res) => {
@@ -47,6 +48,7 @@ router.put('/:id', (req, res)=>{
 
 })
 
+<<<<<<< HEAD
 //NAV ROUTES
 //by city
 router.get('/washingtondc',(req,res)=>{
@@ -60,4 +62,15 @@ router.get('/florida',(req,res)=>{
       res.json(showProp);
     });
 });
+=======
+router.put('/:id/like', (req, res)=>{
+  Property.findById(req.params.id, (err, foundProperty)=>{
+    User.findOneAndUpdate({_id: req.session.currentuser._id}, {return: true}, {$push: {properties: foundProperty}}, (err, updatedUser)=>{
+      console.log(updatedUser)
+  })
+  });
+});
+
+
+>>>>>>> 2e4bfeddea7d8dbdde3ae647725ea99a47d93011
 module.exports = router
