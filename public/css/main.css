@@ -84,8 +84,9 @@ input:focus {
   outline: none;
 }
 .login input[type=text], .user input[type=text], .login input[type=password], .user input[type=password] {
-  border: 1px solid #313131;
+  border: none;
   margin: 1px;
+  padding-left: 5px;
 }
 .logout button {
   width: 150px;
@@ -105,8 +106,17 @@ input:focus {
   background: #313131;
   color: white;
   border: none;
+  padding: 2px;
+}
+.new-prop{
   width: 100%;
+  background: #313131;
+  color: white;
+  border: none;
   padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .new-prop button:hover {
   color: #eafb8a;
@@ -115,14 +125,18 @@ h2 {
   font-size: 15px;
 }
 
-li img {
-  width: 100%;
-  height: auto;
-}
+/*********************************/
+/* property images */
+/*********************************/
 
-.property {
-  width: 30%;
-  margin: 20px;
+.propertyImages {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 ul {
   display: flex;
@@ -130,10 +144,60 @@ ul {
   align-items: center;
   padding-left: 0;
   list-style-type: none;
+  margin: 20px;
+}
+li img {
+  width: 200px;
+  height: 200px;
+  border: 2px solid white;
+}
+li img:hover {
+  border: 2px solid #eafb8a;
+}
+.belowImg {
+  margin-top: 5px;
+  width: 100%;
+}
+.propertyData li {
+  height: 18px;
+}
+.buttons {
+  margin-top: 7px;
+  display: flex;
+  justify-content: space-between;
+}
+.myButton {
+  font-size: 12px;
+  background: #313131;
+  color: white;
+  border: 1px solid #313131;
+  width: 95px;
+}
+.myButton:hover {
+  cursor: pointer;
+  color: #eafb8a;
 }
 
-.propertyImages {
+/*********************************/
+/* footer */
+/*********************************/
+
+.footer {
+  width: 100%;
+  background: #313131;
   display: flex;
-  flex-flow: wrap;
-  justify-content: center
+  flex-direction: row;
+  justify-content: space-between;
+}
+.devs, .ga, .info {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 20px 40px;
+}
+.devs a, .ga a, .info a {
+  color: #eafb8a;
+}
+.devs a:hover, .ga a:hover, .info a:hover {
+  color: #97a066;
 }
