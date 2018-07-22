@@ -185,10 +185,9 @@ this.logOut = function(){
       this.show = !this.show
     }
 
-<<<<<<< HEAD
 //===================================================
 
-    this.getByStateProperty = function(property){
+    this.byStateProperty = function(property){
       $http({
         method: 'GET',
         url: '/properties/' + property.state,
@@ -197,7 +196,7 @@ this.logOut = function(){
       })
     }
 
-    this.getByCityProperty = function(property){
+    this.byCityProperty = function(property){
       $http({
         method: 'GET',
         url: '/properties/' + property.city,
@@ -207,8 +206,6 @@ this.logOut = function(){
       })
     }
 //===================================================
-=======
->>>>>>> 98738428817e093f4dd7077b03098f5cc2fa10bf
     this.noModal = true;
 
   this.getProperties();
