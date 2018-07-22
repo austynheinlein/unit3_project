@@ -1,0 +1,16 @@
+.containDiv {
+  width: 80%;
+  height: 100%;
+}
+
+.containDiv ul {
+  width: 100%;
+}
+
+#imgLine {
+  width: 100%;
+}
+
+#showImg {
+  height: auto;
+}

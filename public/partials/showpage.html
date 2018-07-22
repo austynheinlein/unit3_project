@@ -1,11 +1,19 @@
-<ul>
-  <li>Rent: {{ctrl.property.rent}}</li>
-  <li>Square Feet: {{ctrl.property.sqft}}</li>
-  <li>Address: {{ctrl.property.address}} {{ctrl.property.city}}, {{ctrl.property.state}}
-  <br/>
-  {{ctrl.property.zip}}  </li>
-  <li>Beds: {{ctrl.property.beds}}</li>
-  <li>Baths: {{ctrl.property.baths}}</li>
-  <li><img src="{{ctrl.property.image}}"/></li>
-  <button ng-if="ctrl.loggedIn" ng-click="ctrl.likeProperty(ctrl.property)">Like this property</button>
-</ul>
+<div class="containDiv">
+  <div>
+  <ul>
+      <li>Rent: {{ctrl.property.rent}}</li>
+      <li>Square Feet: {{ctrl.property.sqft}}</li>
+      <li>Address: {{ctrl.property.address}} {{ctrl.property.city}}, {{ctrl.property.state}}
+      <br/>
+      {{ctrl.property.zip}}  </li>
+      <li>Beds: {{ctrl.property.beds}}</li>
+      <li>Baths: {{ctrl.property.baths}}</li>
+    </ul>
+  </div>
+  <div>
+    <ul>
+      <li id="imgLine"><img id="showImg" src="{{ctrl.property.image}}"/></li>
+      <button ng-if="ctrl.loggedIn" ng-click="ctrl.likeProperty(ctrl.property)">Like this property</button>
+    </ul>
+  </div>
+</div>
