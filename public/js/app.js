@@ -4,19 +4,16 @@ const app = angular.module('MyApp', []);
 app.controller('MyController', ['$http', function($http){
   const controller = this;
   this.modal = false;
-  this.loggedIn = false;
 
   this.toggleModal = function(){
     this.modal = !this.modal
     console.log(this.modal)
-    this.noModal = !this.noModal
   }
 
   this.createModal = false;
 
   this.toggleCreateModal = function(){
     this.createModal = !this.createModal
-    this.noModal = !this.noModal
     console.log(this.createModal)
   }
 
@@ -57,12 +54,9 @@ this.logIn = function(){
           url:'/sessions',
           data: {
               username:this.username,
-              password:this.password,
-              properties: []
+              password:this.password
           }
         }).then(function(response){
-          controller.loggedIn = !controller.loggedIn
-          controller.userdata = response
           controller.user = response.config.data.username
             console.log(response);
         })
@@ -78,7 +72,6 @@ this.logOut = function(){
       url: '/sessions'
   }).then(
       function(response){
-        controller.loggedIn = !controller.loggedIn
         console.log(response)
       },
       function(error){
@@ -142,80 +135,44 @@ this.logOut = function(){
       console.log(this.property.image)
     }
 
-// Push one property into the user
-    this.likeProperty = function(property){
-      $http({
-        method: 'PUT',
-        url: '/properties/' + property._id + '/like',
-        data: {
-          property: property
-        }
-      }).then(function(response){
-        console.log(response)
-      }, function(error){
-        console.log(error)
-      })
-    }
 
-    // Update logic
-        this.updateProperty = function(property){
-          $http({
-            method: 'PUT',
-            url: '/properties/' + property._id,
-            data: {
-                image: this.image,
-                rent: this.rent,
-                sqft: this.sqft,
-                address: this.address,
-                beds: this.beds,
-                baths: this.baths,
-                city: this.city,
-                state: this.state,
-                zip: this.zip
-            }
-          }).then(function(response){
-            console.log(response)
-            controller.getProperties()
-            console.log('hi')
-            console.log(response)
-            controller.toggleModal();
-          })
-        }
     // Click for show page
 
     this.chooseOneShowProperty = function(property){
         this.property = property;
-       console.log(this.property.image)
+        console.log(this.property.image)
       }
+
+// Update logic
+    this.updateProperty = function(property){
+      $http({
+        method: 'PUT',
+        url: '/properties/' + property._id,
+        data: {
+            image: this.image,
+            rent: this.rent,
+            sqft: this.sqft,
+            address: this.address,
+            beds: this.beds,
+            baths: this.baths,
+            city: this.city,
+            state: this.state,
+            zip: this.zip
+        }
+      }).then(function(response){
+        console.log(response)
+        controller.getProperties()
+        console.log('hi')
+        console.log(response)
+        controller.toggleModal();
+      })
+    }
 
     this.show = false;
 
     this.toggleShow = function(property){
       this.show = !this.show
     }
-
-//===================================================
-
-    this.byStateProperty = function(property){
-      $http({
-        method: 'GET',
-        url: '/properties/' + property.state,
-      }).then(function(response){
-        controller.properties = response.data
-      })
-    }
-
-    this.byCityProperty = function(property){
-      $http({
-        method: 'GET',
-        url: '/properties/' + property.city,
-      }).then(function(response){
-        controller.properties = response.data
-        console.log(response.data);
-      })
-    }
-//===================================================
-    this.noModal = true;
 
   this.getProperties();
 }]);
