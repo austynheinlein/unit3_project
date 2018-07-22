@@ -1,20 +1,13 @@
 <div class="">
-  <div class="dropdown">
-            <button class="dropbtn nav-item">City</button>
-              <div class="dropdown-content">
-                <a ng-click="ctrl.byStateProperty(showProp)"href="/properties/seattle">Seattle</a>
-                <a href="/properties/stpetersburg">St. Petersburg</a>
-                <a href="/properties/portland">Portland</a>
-              </div>
-          </div>
-          <div class="dropdown nav-item">
-            <button class="dropbtn">State</button>
-              <div class="dropdown-content">
-                <a href="/properties/florida">Florida</a>
-                <a href="/properties/maine">Maine</a>
-                <a href="/properties/washington">Washington</a>
-              </div>
-          </div>
+  <label for="Search by">
+	<input type='text' placeholder='Beds' ng-model='searchBox'>
+  <input type='text' placeholder='Baths' ng-model='searchBox'>
+  <input type='text' placeholder='City' ng-model='searchBox'>
+  <input type='text' placeholder='State' ng-model='searchBox'>
+</label>
+<ul>
+	<li ng-repeat="property in ctrl.properties| filter: searchBox">{{ propert.address}} :<span> {{property.rent | currency}}</span></li>
+</ul>
 
 </div>
 

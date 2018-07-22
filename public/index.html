@@ -8,52 +8,10 @@
      <!-- LOCAL CSS -->
      <link rel="stylesheet" href="/css/main.css">
      <link rel="stylesheet" href="/css/modal.css">
-     <link rel="stylesheet" href="/css/nav.css">
-     <style media="screen">
-       img{
-         max-width: 300px;
-       }
-     </style>
     <meta charset="utf-8">
     <title>RENTR</title>
   </head>
   <body ng-controller="MyController as ctrl">
-<<<<<<< HEAD
-    <div class="container">
-      <div class="header">
-        <!-- LOGO -->
-        <div class="icon">
-          <a href="#"><img src="./assets/rentr_icon.png" alt="house icon"></a>
-        </div>
-        <div class="session">
-          <div class="create-login">
-            <div class="user">
-              <!-- CREATE USER -->
-                <h2>Create User</h2>
-                <form ng-submit='ctrl.createUser()'>
-                  <input type="text" ng-model='ctrl.username' placeholder="username">
-                  <input type="password" ng-model='ctrl.password'
-                  placeholder="password">
-                  <input type="submit" value="Create User">
-                </form>
-            </div>
-            <div class="login">
-              <!-- CREATE LOGIN -->
-                <h2>Log In</h2>
-                <form ng-submit='ctrl.logIn()'>
-                  <input type="text" ng-model='ctrl.username' placeholder="username">
-                  <input type="password" ng-model='ctrl.password' placeholder="password">
-                  <input type="submit" value="Log In">
-                </form>
-            </div>
-          </div>
-          <div class="logout">
-            <!-- LOG OUT BUTTON -->
-              <button ng-click="ctrl.logOut()">Log Out</button>
-          </div>
-        </div>
-      </div>
-=======
     <!-- EDIT PROPERTY FORM -->
     <div id="updateModal" ng-class="(ctrl.modal ? 'modalAppears' : 'modalDisappears')">
     <h1>Update</h1>
@@ -86,7 +44,7 @@
     <!-- CREATE PROPERTY FORM -->
     <div id="createModal" ng-class="(ctrl.createModal ? 'modalAppears' : 'modalDisappears')">
     <form ng-submit="ctrl.createProperty()">
-      <!-- {{ctrl.rent}} - {{ctrl.address}} -->
+      {{ctrl.rent}} - {{ctrl.address}}
       <br/>
       <input type="text" ng-model="ctrl.image" placeholder="image url"/>
       <br/>
@@ -114,12 +72,9 @@
       <!-- LOGO --><!-- CREATE USER --><!-- CREATE LOGIN --><!-- LOG OUT BUTTON -->
       <div class= "header" ng-include="'partials/header.html'"></div>
 
->>>>>>> 2e4bfeddea7d8dbdde3ae647725ea99a47d93011
 
-      <div class="new-prop">
-        <!-- CREATE NEW PROP BUTTON -->
-        <button ng-click="ctrl.toggleCreateModal()">Create a New Property</button>
-      </div>
+      <!-- CREATE NEW PROP BUTTON -->
+      <div class="new-prop" ng-include="'/partials/properties/create_property.html'"></div>
 
 
         <!-- DISPLAY LISTING AND DELETE FUNCTIONALITY -->
@@ -127,24 +82,6 @@
           <div class="property" ng-repeat="property in ctrl.properties">
             <ul>
               <li>
-<<<<<<< HEAD
-                <img src="{{property.image}}" alt="apartment image"/>
-              </li>
-              <li>
-                {{property.rent | currency}}
-              </li>
-              <li>
-                {{property.address}}
-              </li>
-              <li>
-                {{property.city}}
-              </li>
-              <li>
-                {{property.state}}
-              </li>
-            <button ng-mouseover="ctrl.chooseOneProperty(property)" ng-click="ctrl.toggleModal()">Update Listing</button>
-            <button ng-click="ctrl.deleteProperty(property)">Delete This Listing</button>
-=======
                 <div class="propertyImg">
                   <div ng-click="ctrl.toggleShow(); ctrl.chooseOneShowProperty(property)" class="propertyImg">
                 <img src="{{property.image}}" alt="apartment image"/>
@@ -153,7 +90,7 @@
               <div class="belowImg">
                 <div class="propertyData">
                   <li>
-                    {{property.rent | currency}}
+                    {{property.rent}}
                   </li>
                   <li>
                     {{property.address}}
@@ -174,7 +111,6 @@
         </div>
         </div>
       </div>
->>>>>>> 2e4bfeddea7d8dbdde3ae647725ea99a47d93011
 
     <!-- Show page Below  -->
       <div ng-if="ctrl.show" ng-include="'partials/showpage.html'">
@@ -202,12 +138,7 @@
             <a href="#">Careers</a>
           </div>
         </div>
-<<<<<<< HEAD
-          <div ng-include="'/partials/search.html'"></div>
-    </div><!-- END CONTAINER DIV -->
-=======
 
     <!-- </div><! END CONTAINER DIV -->
->>>>>>> 2e4bfeddea7d8dbdde3ae647725ea99a47d93011
   </body>
 </html>
