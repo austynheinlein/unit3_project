@@ -1,5 +1,5 @@
 <div class="">
-  <div class="dropdown">
+  <div class="dropdown" ng-model='searchBox'>
             <button class="dropbtn nav-item">City</button>
               <div class="dropdown-content">
                 <button ng-click="ctrl.getSearchedProperties('seattle')">Seattle</button>
@@ -16,13 +16,18 @@
                 <button ng-click="ctrl.getSearchedProperties('maine')">Maine</button>
                 <button ng-click="ctrl.getSearchedProperties('washington')">Washington</button>
                 <button ng-click="ctrl.getSearchedProperties('')">All</button>
-
               </div>
           </div>
 
+			<!-- <label for="rent-up">Rent Low to High</label>
+			<input type="radio" name="order" value="rent" ng-model='order' id="rent-up"/>
+			<label for="rent-down">Rent High to Low</label>
+			<input type="radio" name="order" value="-rent" ng-model='order'id="rent-down"/> -->
+
+
 
     </div>
-
+<!-- filter: searchBox | orderBy: order in the property ng-repeat -->
 
 </div>
 
