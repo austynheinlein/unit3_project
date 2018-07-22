@@ -8,6 +8,7 @@
      <!-- LOCAL CSS -->
      <link rel="stylesheet" href="/css/main.css">
      <link rel="stylesheet" href="/css/modal.css">
+     <link rel="stylesheet" href="/css/nav.css">
     <meta charset="utf-8">
     <title>RENTR</title>
   </head>
@@ -17,6 +18,9 @@
       <div class= "header" ng-include="'partials/header.html'"></div>
       <!-- CREATE NEW PROP BUTTON -->
       <div class="new-prop" ng-include="'/partials/properties/create_property.html'"></div>
+
+      <!-- SEARCH PARTIAL -->
+      <div class= "" ng-include="'partials/search.html'"></div>
           <!-- EDIT PROPERTY FORM -->
       <div id="updateModal" ng-class="(ctrl.modal ? 'modalAppears' : 'modalDisappears')">
         <h1>Update</h1>
