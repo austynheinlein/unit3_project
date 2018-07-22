@@ -185,27 +185,6 @@ this.logOut = function(){
       this.show = !this.show
     }
 
-//===================================================
-
-    this.byStateProperty = function(property){
-      $http({
-        method: 'GET',
-        url: '/properties/' + property.state,
-      }).then(function(response){
-        controller.properties = response.data
-      })
-    }
-
-    this.byCityProperty = function(property){
-      $http({
-        method: 'GET',
-        url: '/properties/' + property.city,
-      }).then(function(response){
-        controller.properties = response.data
-        console.log(response.data);
-      })
-    }
-//===================================================
     this.noModal = true;
 
   this.getProperties();
