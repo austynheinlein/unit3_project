@@ -56,7 +56,8 @@ this.logIn = function(){
           url:'/sessions',
           data: {
               username:this.username,
-              password:this.password
+              password:this.password,
+              properties: []
           }
         }).then(function(response){
           controller.userdata = response
@@ -139,14 +140,19 @@ this.logOut = function(){
     }
 
 // Push one property into the user
-    // this.likeProperty = function(property){
-    //   $http({
-    //     method: 'PUT',
-    //     url: '/properties/' + property._id + '/like/'
-    //   }).then(function(response){
-    //     console.log(response)
-    //   })
-    // }
+    this.likeProperty = function(property){
+      $http({
+        method: 'put',
+        url: '/properties/' + property._id + '/like',
+        data: {
+          property: property
+        }
+      }).then(function(response){
+        console.log(response)
+      }, function(error){
+        console.log(error)
+      })
+    }
 
     // Update logic
         this.updateProperty = function(property){
