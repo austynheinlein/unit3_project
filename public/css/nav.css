@@ -30,15 +30,21 @@
 }
 
 /* Links inside the dropdown */
-.dropdown-content a {
+.dropdown-content button {
+    width:100%;
+    padding: 16px;
     color: black;
-    padding: 12px 16px;
+    border: none;
     text-decoration: none;
     display: block;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content button:hover {
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
@@ -63,9 +69,6 @@ button:focus {outline:0;}
 }
 @media (max-width: 576px) {
 
-  *{
-    font-size: .5em;
-  }
   .dropbtn{
     font-size: .5em;
       padding: 5px;

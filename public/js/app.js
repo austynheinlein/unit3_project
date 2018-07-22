@@ -195,25 +195,19 @@ this.logOut = function(){
     }
 
 // NAV STUFF
-this.getByStateProperty = function(property){
+
+this.getSearchedProperties = function(search){
+  console.log('GET SEARCH');
+  console.log(search);
   $http({
-    method: 'GET',
-    url: '/properties/' + property.state,
+    method:'GET',
+    url: '/properties/' + search
   }).then(function(response){
     controller.properties = response.data
   })
 }
 
-this.getByCityProperty = function(property){
-  $http({
-    method: 'GET',
-    url: '/properties/' + property.city,
-  }).then(function(response){
-    controller.properties = response.data
-    console.log(response.data);
-  })
-}
-    this.noModal = true;
+  this.noModal = true;
 
   this.getProperties();
 }]);
