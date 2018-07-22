@@ -48,7 +48,7 @@ router.put('/:id', (req, res)=>{
 
 })
 
-//<<<<<<< HEAD
+
 //NAV ROUTES
 //by city
 router.get('/stpetersburg',(req,res)=>{
@@ -84,18 +84,18 @@ router.get('/washington',(req,res)=>{
     });
 });
 
-//=======
+
 router.put('/:id/like', (req, res)=>{
-  Property.findById(req.params.id, (err, foundProperty)=>{
-    console.log(foundProperty)
-    let property = foundProperty;
-    User.findByIdAndUpdate( req.session.currentUser._id, {$push: {properties: property}}, (err, updatedUser)=>{
-      res.json(updatedUser)
-      console.log(updatedUser)
-  })
-  });
+ Property.findById(req.params.id, (err, foundProperty)=>{
+   console.log(foundProperty)
+   let property = foundProperty;
+   User.findByIdAndUpdate( req.session.currentUser._id, {$push: {properties: property}}, (err, updatedUser)=>{
+     res.json(updatedUser)
+     console.log(updatedUser)
+ })
+ });
 });
 
 
-//>>>>>>> 2e4bfeddea7d8dbdde3ae647725ea99a47d93011
+
 module.exports = router

@@ -145,7 +145,7 @@ this.logOut = function(){
 // Push one property into the user
     this.likeProperty = function(property){
       $http({
-        method: 'put',
+        method: 'PUT',
         url: '/properties/' + property._id + '/like',
         data: {
           property: property
