@@ -10,7 +10,8 @@ const propertiesSchema = new Schema({
   baths: Number,
   city: String,
   state: String,
-  zip: Number
+  zip: Number,
+  description: String
 },
 {
   timestamps: true

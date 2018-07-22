@@ -8,7 +8,8 @@ module.exports = [
     baths: 4,
     city: 'St. Petersburg',
     state: 'Florida',
-    zip: 33701
+    zip: 33701,
+    description: 'UNDER CONSTRUCTION and the showroom is now available to view finish options. Welcome to the Sabal; downtown St. Petersburg\'s first smart, luxury townhouse. Each home consists of 4 levels complete with cutting-edge home automation technology and highly energy efficient systems. From the desirable up and coming location to the solid masonry construction to the impeccable design, no detail has been overlooked. Before you enter the door; use your phone to turn on a few lights, set the temperature, even start your favorite soundtrack. After enjoying a meal with friends in your open concept kitchen, continue your night up to the 4th level bonus room and step out onto the abundant rooftop terrace where you can enjoy the sounds of the city and the stars above. Live everyday, in style and function. Please see for more details.'
   },
   {
     image: 'https://pbs.twimg.com/profile_images/822251886988267520/28GpoRsy_400x400.jpg',
@@ -19,7 +20,8 @@ module.exports = [
     baths: 35,
     city:  'Washington',
     state: 'DC',
-    zip: 20500
+    zip: 20500,
+    description: 'UNDER CONSTRUCTION and the showroom is now available to view finish options. Welcome to the Sabal; downtown St. Petersburg\'s first smart, luxury townhouse. Each home consists of 4 levels complete with cutting-edge home automation technology and highly energy efficient systems. From the desirable up and coming location to the solid masonry construction to the impeccable design, no detail has been overlooked. Before you enter the door; use your phone to turn on a few lights, set the temperature, even start your favorite soundtrack. After enjoying a meal with friends in your open concept kitchen, continue your night up to the 4th level bonus room and step out onto the abundant rooftop terrace where you can enjoy the sounds of the city and the stars above. Live everyday, in style and function. Please see for more details.'
   },
   {
     image: 'http://www.homedesigninteriors.com/wp-content/uploads/2018/03/Modern-Wooden-Cabin-Fascinating-A-Frame-House-Design-1.jpg',
@@ -30,7 +32,8 @@ module.exports = [
     baths: 1,
     city:  'Harpswell',
     state: 'Maine',
-    zip: 04003
+    zip: 04003,
+    description: 'UNDER CONSTRUCTION and the showroom is now available to view finish options. Welcome to the Sabal; downtown St. Petersburg\'s first smart, luxury townhouse. Each home consists of 4 levels complete with cutting-edge home automation technology and highly energy efficient systems. From the desirable up and coming location to the solid masonry construction to the impeccable design, no detail has been overlooked. Before you enter the door; use your phone to turn on a few lights, set the temperature, even start your favorite soundtrack. After enjoying a meal with friends in your open concept kitchen, continue your night up to the 4th level bonus room and step out onto the abundant rooftop terrace where you can enjoy the sounds of the city and the stars above. Live everyday, in style and function. Please see for more details.'
   },
   {
     image: 'https://i.pinimg.com/originals/f6/e1/0c/f6e10c567f234bf5ed1575e17f630526.jpg',
@@ -41,7 +44,8 @@ module.exports = [
     baths: 1,
     city:  'Portland',
     state: 'Maine',
-    zip: 04102
+    zip: 04102,
+    description: 'UNDER CONSTRUCTION and the showroom is now available to view finish options. Welcome to the Sabal; downtown St. Petersburg\'s first smart, luxury townhouse. Each home consists of 4 levels complete with cutting-edge home automation technology and highly energy efficient systems. From the desirable up and coming location to the solid masonry construction to the impeccable design, no detail has been overlooked. Before you enter the door; use your phone to turn on a few lights, set the temperature, even start your favorite soundtrack. After enjoying a meal with friends in your open concept kitchen, continue your night up to the 4th level bonus room and step out onto the abundant rooftop terrace where you can enjoy the sounds of the city and the stars above. Live everyday, in style and function. Please see for more details.'
   },
   {
     image: 'https://ap.rdcpix.com/28441372/03e184a9664383f9a6ec1f552a083367l-m0xd-w1020_h770_q80.jpg',
@@ -52,7 +56,8 @@ module.exports = [
     baths: 1,
     city:  'Portland',
     state: 'Maine',
-    zip: 04101
+    zip: 04101,
+    description: 'UNDER CONSTRUCTION and the showroom is now available to view finish options. Welcome to the Sabal; downtown St. Petersburg\'s first smart, luxury townhouse. Each home consists of 4 levels complete with cutting-edge home automation technology and highly energy efficient systems. From the desirable up and coming location to the solid masonry construction to the impeccable design, no detail has been overlooked. Before you enter the door; use your phone to turn on a few lights, set the temperature, even start your favorite soundtrack. After enjoying a meal with friends in your open concept kitchen, continue your night up to the 4th level bonus room and step out onto the abundant rooftop terrace where you can enjoy the sounds of the city and the stars above. Live everyday, in style and function. Please see for more details.'
   },
   {
     image: 'http://3.bp.blogspot.com/-KtqilLH3fCM/UT97DyTvCwI/AAAAAAAAEqg/sFGwbBu99TY/s1600/DSC_0104.jpg',
@@ -63,7 +68,8 @@ module.exports = [
     baths: 1,
     city:  'Portland',
     state: 'Maine',
-    zip: 04101
+    zip: 04101,
+    description: 'UNDER CONSTRUCTION and the showroom is now available to view finish options. Welcome to the Sabal; downtown St. Petersburg\'s first smart, luxury townhouse. Each home consists of 4 levels complete with cutting-edge home automation technology and highly energy efficient systems. From the desirable up and coming location to the solid masonry construction to the impeccable design, no detail has been overlooked. Before you enter the door; use your phone to turn on a few lights, set the temperature, even start your favorite soundtrack. After enjoying a meal with friends in your open concept kitchen, continue your night up to the 4th level bonus room and step out onto the abundant rooftop terrace where you can enjoy the sounds of the city and the stars above. Live everyday, in style and function. Please see for more details.'
   },
   {
     image: 'https://photos.zillowstatic.com/p_h/IS2rtnjxzptckt1000000000.jpg',
@@ -74,7 +80,8 @@ module.exports = [
     baths: 1.5,
     city:  'Portland',
     state: 'Maine',
-    zip: 04103
+    zip: 04103,
+    description: 'UNDER CONSTRUCTION and the showroom is now available to view finish options. Welcome to the Sabal; downtown St. Petersburg\'s first smart, luxury townhouse. Each home consists of 4 levels complete with cutting-edge home automation technology and highly energy efficient systems. From the desirable up and coming location to the solid masonry construction to the impeccable design, no detail has been overlooked. Before you enter the door; use your phone to turn on a few lights, set the temperature, even start your favorite soundtrack. After enjoying a meal with friends in your open concept kitchen, continue your night up to the 4th level bonus room and step out onto the abundant rooftop terrace where you can enjoy the sounds of the city and the stars above. Live everyday, in style and function. Please see for more details.'
   },
   {
     image: 'https://media.equityapartments.com/images/c_crop,x_0,y_0,w_1920,h_1080/c_fill,w_1920,h_1080/q_80/4207-19/packard-apartments-exterior.jpg',
@@ -85,7 +92,8 @@ module.exports = [
     baths: 1,
     city:  'Seattle',
     state: 'Washington',
-    zip: 00000
+    zip: 00000,
+    description: 'UNDER CONSTRUCTION and the showroom is now available to view finish options. Welcome to the Sabal; downtown St. Petersburg\'s first smart, luxury townhouse. Each home consists of 4 levels complete with cutting-edge home automation technology and highly energy efficient systems. From the desirable up and coming location to the solid masonry construction to the impeccable design, no detail has been overlooked. Before you enter the door; use your phone to turn on a few lights, set the temperature, even start your favorite soundtrack. After enjoying a meal with friends in your open concept kitchen, continue your night up to the 4th level bonus room and step out onto the abundant rooftop terrace where you can enjoy the sounds of the city and the stars above. Live everyday, in style and function. Please see for more details.'
   },
   {
     image: 'https://cdn.geekwire.com/wp-content/uploads/2015/02/Screen-Shot-2015-02-20-at-9.29.11-AM-620x309.png',
@@ -96,7 +104,8 @@ module.exports = [
     baths: 1,
     city:  'Seattle',
     state: 'Washington',
-    zip: 00000
+    zip: 00000,
+    description: 'UNDER CONSTRUCTION and the showroom is now available to view finish options. Welcome to the Sabal; downtown St. Petersburg\'s first smart, luxury townhouse. Each home consists of 4 levels complete with cutting-edge home automation technology and highly energy efficient systems. From the desirable up and coming location to the solid masonry construction to the impeccable design, no detail has been overlooked. Before you enter the door; use your phone to turn on a few lights, set the temperature, even start your favorite soundtrack. After enjoying a meal with friends in your open concept kitchen, continue your night up to the 4th level bonus room and step out onto the abundant rooftop terrace where you can enjoy the sounds of the city and the stars above. Live everyday, in style and function. Please see for more details.'
   },
   {
     image: 'http://seattleluxuryrental.com/wp-content/blogs.dir/18/files/2012/06/981211.jpg',
@@ -107,7 +116,8 @@ module.exports = [
     baths: 1,
     city:  'Seattle',
     state: 'Washington',
-    zip: 00000
+    zip: 00000,
+    description: 'UNDER CONSTRUCTION and the showroom is now available to view finish options. Welcome to the Sabal; downtown St. Petersburg\'s first smart, luxury townhouse. Each home consists of 4 levels complete with cutting-edge home automation technology and highly energy efficient systems. From the desirable up and coming location to the solid masonry construction to the impeccable design, no detail has been overlooked. Before you enter the door; use your phone to turn on a few lights, set the temperature, even start your favorite soundtrack. After enjoying a meal with friends in your open concept kitchen, continue your night up to the 4th level bonus room and step out onto the abundant rooftop terrace where you can enjoy the sounds of the city and the stars above. Live everyday, in style and function. Please see for more details.'
   },
   {
     image: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Alexander_Hotel%2C_535_Central_Avenue%2C_St._Petersburg%2C_Florida.jpg',
@@ -118,7 +128,8 @@ module.exports = [
     baths: 1,
     city:  'St. Petersburg',
     state: 'Florida',
-    zip: 00000
+    zip: 00000,
+    description: 'UNDER CONSTRUCTION and the showroom is now available to view finish options. Welcome to the Sabal; downtown St. Petersburg\'s first smart, luxury townhouse. Each home consists of 4 levels complete with cutting-edge home automation technology and highly energy efficient systems. From the desirable up and coming location to the solid masonry construction to the impeccable design, no detail has been overlooked. Before you enter the door; use your phone to turn on a few lights, set the temperature, even start your favorite soundtrack. After enjoying a meal with friends in your open concept kitchen, continue your night up to the 4th level bonus room and step out onto the abundant rooftop terrace where you can enjoy the sounds of the city and the stars above. Live everyday, in style and function. Please see for more details.'
   },
   {
     image: 'http://4.bp.blogspot.com/-P1e1o2EIE5s/Up9zmk1x23I/AAAAAAABdzA/Js8aQeT49_k/s1600/Treasure+Bay+apts+st.+petersburg+fl.jpg',
@@ -129,7 +140,8 @@ module.exports = [
     baths: 1,
     city:  'St. Petersburg',
     state: 'Florida',
-    zip: 00000
+    zip: 00000,
+    description: 'UNDER CONSTRUCTION and the showroom is now available to view finish options. Welcome to the Sabal; downtown St. Petersburg\'s first smart, luxury townhouse. Each home consists of 4 levels complete with cutting-edge home automation technology and highly energy efficient systems. From the desirable up and coming location to the solid masonry construction to the impeccable design, no detail has been overlooked. Before you enter the door; use your phone to turn on a few lights, set the temperature, even start your favorite soundtrack. After enjoying a meal with friends in your open concept kitchen, continue your night up to the 4th level bonus room and step out onto the abundant rooftop terrace where you can enjoy the sounds of the city and the stars above. Live everyday, in style and function. Please see for more details.'
   },
   {
     image: 'https://odis.homeaway.com/odis/destination/35e08107-dd89-42da-9f24-7ebd66dce4e6.hw1.jpg',
@@ -140,6 +152,7 @@ module.exports = [
     baths: 1.5,
     city:  'St. Petersburg',
     state: 'Florida',
-    zip: 00000
+    zip: 00000,
+    description: 'UNDER CONSTRUCTION and the showroom is now available to view finish options. Welcome to the Sabal; downtown St. Petersburg\'s first smart, luxury townhouse. Each home consists of 4 levels complete with cutting-edge home automation technology and highly energy efficient systems. From the desirable up and coming location to the solid masonry construction to the impeccable design, no detail has been overlooked. Before you enter the door; use your phone to turn on a few lights, set the temperature, even start your favorite soundtrack. After enjoying a meal with friends in your open concept kitchen, continue your night up to the 4th level bonus room and step out onto the abundant rooftop terrace where you can enjoy the sounds of the city and the stars above. Live everyday, in style and function. Please see for more details.'
   },
 ]
