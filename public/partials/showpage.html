@@ -1,4 +1,18 @@
+
+<div class="container">
+  <!-- LOGO --><!-- CREATE USER --><!-- CREATE LOGIN --><!-- LOG OUT BUTTON -->
+
+  <!-- HEADER -->
+<div class= "header" ng-include="'partials/header.html'"></div>
+<!-- CREATE NEW PROP BUTTON -->
+<div class="new-prop" ng-include="'/partials/properties/create_property.html'"></div>
 <div class="containDiv">
+  <div>
+    <ul>
+      <li id="imgLine"><img id="showImg" src="{{ctrl.property.image}}"/></li>
+      <button ng-if="ctrl.loggedIn" ng-click="ctrl.likeProperty(ctrl.property)">Like this property</button>
+    </ul>
+  </div>
   <div>
   <ul>
       <li>Rent: {{ctrl.property.rent}}</li>
@@ -8,12 +22,7 @@
       {{ctrl.property.zip}}  </li>
       <li>Beds: {{ctrl.property.beds}}</li>
       <li>Baths: {{ctrl.property.baths}}</li>
-    </ul>
-  </div>
-  <div>
-    <ul>
-      <li id="imgLine"><img id="showImg" src="{{ctrl.property.image}}"/></li>
-      <button ng-if="ctrl.loggedIn" ng-click="ctrl.likeProperty(ctrl.property)">Like this property</button>
+      <li><button ng-click="ctrl.toggleShow()">Return Home</button>
     </ul>
   </div>
   <h1>My First Google Map</h1>

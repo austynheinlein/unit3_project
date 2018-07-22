@@ -5,6 +5,8 @@ app.controller('MyController', ['$http', function($http){
   const controller = this;
   this.modal = false;
   this.loggedIn = false;
+  this.noShow = true;
+
 
   this.toggleModal = function(){
     this.modal = !this.modal
@@ -191,6 +193,7 @@ this.logOut = function(){
     this.show = false;
 
     this.toggleShow = function(property){
+      this.noShow = !this.noShow
       this.show = !this.show
     }
 

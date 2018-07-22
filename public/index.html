@@ -7,6 +7,7 @@
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
      <!-- LOCAL CSS -->
      <link rel="stylesheet" href="/css/main.css">
+     <link rel="stylesheet" href="/css/sandbox.css">
      <link rel="stylesheet" href="/css/modal.css">
      <link rel="stylesheet" href="/css/nav.css">
     <meta charset="utf-8">
@@ -86,7 +87,7 @@
         </div>
 
   <!-- CONTAINER -->
-    <div class="container" ng-if="ctrl.noModal">
+    <div class="container" ng-if="ctrl.noModal; ctrl.noShow">
       <!-- LOGO --><!-- CREATE USER --><!-- CREATE LOGIN --><!-- LOG OUT BUTTON -->
 
       <!-- HEADER -->
@@ -103,7 +104,7 @@
             <ul>
               <li>
                 <div ng-click="ctrl.toggleShow(); ctrl.chooseOneShowProperty(property)" class="propertyImg">
-                <img src="{{property.image}}" alt="apartment image"/>
+                <img ng-src="{{property.image}}" alt="apartment image"/>
               </li>
               <div class="belowImg">
                 <div class="propertyData">
@@ -127,6 +128,8 @@
               </div>
           </div>
         </div>
+        </div>
+        </div>
         <div ng-if="ctrl.show" ng-include="'partials/showpage.html'">
           </div>
         <!-- FOOTER -->
@@ -148,6 +151,6 @@
             <a href="#">Careers</a>
           </div>
           </div>
-        </div><!-- END CONTAINER DIV -->
+          <!-- END CONTAINER DIV -->
   </body>
 </html>
