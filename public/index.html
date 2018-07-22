@@ -78,7 +78,7 @@
         </div>
         <!-- DISPLAY LISTING AND DELETE FUNCTIONALITY -->
         <div class="propertyImages">
-          <div class="property" ng-repeat="property in ctrl.properties">
+          <div class="property" ng-repeat="property in ctrl.properties |filter: searchBox | orderBy: order">
             <ul>
               <li>
                 <div ng-click="ctrl.toggleShow(); ctrl.chooseOneShowProperty(property)" class="propertyImg">
