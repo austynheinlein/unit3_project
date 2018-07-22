@@ -9,6 +9,11 @@
      <link rel="stylesheet" href="/css/main.css">
      <link rel="stylesheet" href="/css/modal.css">
      <link rel="stylesheet" href="/css/nav.css">
+     <style media="screen">
+       img{
+         max-width: 300px;
+       }
+     </style>
     <meta charset="utf-8">
     <title>RENTR</title>
   </head>
@@ -81,7 +86,7 @@
     <!-- CREATE PROPERTY FORM -->
     <div id="createModal" ng-class="(ctrl.createModal ? 'modalAppears' : 'modalDisappears')">
     <form ng-submit="ctrl.createProperty()">
-      {{ctrl.rent}} - {{ctrl.address}}
+      <!-- {{ctrl.rent}} - {{ctrl.address}} -->
       <br/>
       <input type="text" ng-model="ctrl.image" placeholder="image url"/>
       <br/>
@@ -126,7 +131,7 @@
                 <img src="{{property.image}}" alt="apartment image"/>
               </li>
               <li>
-                {{property.rent}}
+                {{property.rent | currency}}
               </li>
               <li>
                 {{property.address}}
@@ -148,7 +153,7 @@
               <div class="belowImg">
                 <div class="propertyData">
                   <li>
-                    {{property.rent}}
+                    {{property.rent | currency}}
                   </li>
                   <li>
                     {{property.address}}
@@ -198,7 +203,7 @@
           </div>
         </div>
 <<<<<<< HEAD
-          <div ng-include="'/partials/search.html'"></div> 
+          <div ng-include="'/partials/search.html'"></div>
     </div><!-- END CONTAINER DIV -->
 =======
 
