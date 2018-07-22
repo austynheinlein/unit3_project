@@ -63,9 +63,6 @@ button:focus {outline:0;}
 }
 @media (max-width: 576px) {
 
-  *{
-    font-size: .5em;
-  }
   .dropbtn{
     font-size: .5em;
       padding: 5px;

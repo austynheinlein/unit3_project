@@ -56,7 +56,7 @@ body {
 
 .modalAppears {
   position: absolute;
-  top: 0;
+  /* top: 0; */
   /* background-image: url(https://www.mertonsimpson.com/wp-content/uploads/2018/05/home-ma-modular-affordable-homes-modern-prefab-texas-ontario-california-nc-housing-florida-astonishing.jpeg); */
   background: linear-gradient(
       rgba(255, 255, 255, 0.45),
@@ -80,8 +80,8 @@ body {
   display: none;
 }
 
-#updateModal > form {
-}
+/* #updateModal > form {
+} */
 
 /* .propertyImg {
   margin: 0 auto;
@@ -89,3 +89,10 @@ body {
   width: 100%;
   height: auto;
 } */
+
+@media only screen and (max-width: 576px)  {
+
+}
+
+
+}
