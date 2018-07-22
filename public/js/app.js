@@ -213,7 +213,24 @@ this.getByCityProperty = function(property){
     console.log(response.data);
   })
 }
-    this.noModal = true;
+
+
+this.haveSearchedSomething = false
+this.onHomePage = true
+this.getSearchedProperties = function(search){
+  this.haveSearchedSomething = true
+  this.onHomePage = false
+  console.log('GET SEARCH');
+  console.log(search);
+  $http({
+    method:'GET',
+    url: '/properties/' + search
+  }).then(function(response){
+    controller.properties = response.data
+  })
+}
+
+  this.noModal = true;
 
   this.getProperties();
 }]);

@@ -2,19 +2,27 @@
   <div class="dropdown">
             <button class="dropbtn nav-item">City</button>
               <div class="dropdown-content">
-                <a ng-click="ctrl.byStateProperty(showProp)"href="/properties/seattle">Seattle</a>
-                <a href="/properties/stpetersburg">St. Petersburg</a>
-                <a href="/properties/portland">Portland</a>
+                <button ng-click="ctrl.getSearchedProperties('seattle')">Seattle</button>
+                <button ng-click="ctrl.getSearchedProperties('stpetersburg')">St. Petersburg</button>
+                <button ng-click="ctrl.getSearchedProperties('portland')">Portland</button>
+                <button ng-click="ctrl.getSearchedProperties('')">All</button>
+
               </div>
           </div>
           <div class="dropdown nav-item">
             <button class="dropbtn">State</button>
               <div class="dropdown-content">
-                <a href="/properties/florida">Florida</a>
-                <a href="/properties/maine">Maine</a>
-                <a href="/properties/washington">Washington</a>
+                <button ng-click="ctrl.getSearchedProperties('florida')">Florida</button>
+                <button ng-click="ctrl.getSearchedProperties('maine')">Maine</button>
+                <button ng-click="ctrl.getSearchedProperties('washington')">Washington</button>
+                <button ng-click="ctrl.getSearchedProperties('')">All</button>
+
               </div>
           </div>
+
+
+    </div>
+
 
 </div>
 
