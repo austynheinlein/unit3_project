@@ -60,4 +60,36 @@ router.put('/:id/like', (req, res)=>{
 });
 
 
+router.get('/florida',(req,res)=>{
+    Property.find({state: {$in: ['Florida']}},null, {sort: {name: 1}}, (err, filteredProp)=>{
+      res.json(filteredProp);
+    });
+});
+
+router.get('/washington',(req,res)=>{
+    Property.find({state: {$in: ['Washington']}},null, {sort: {name: 1}}, (err, filteredProp)=>{
+      res.json(filteredProp);
+    });
+});
+router.get('/maine',(req,res)=>{
+    Property.find({state: {$in: ['Maine']}},null, {sort: {name: 1}}, (err, filteredProp)=>{
+      res.json(filteredProp);
+    });
+});
+router.get('/portland',(req,res)=>{
+    Property.find({city: {$in: ['Portland']}},null, {sort: {name: 1}}, (err, filteredProp)=>{
+      res.json(filteredProp);
+    });
+});
+router.get('/seattle',(req,res)=>{
+    Property.find({city: {$in: ['Seattle']}},null, {sort: {name: 1}}, (err, filteredProp)=>{
+      res.json(filteredProp);
+    });
+});
+router.get('/stpetersburg',(req,res)=>{
+    Property.find({city: {$in: ['St. Petersburg']}},null, {sort: {name: 1}}, (err, filteredProp)=>{
+      res.json(filteredProp);
+    });
+});
+
 module.exports = router

@@ -194,6 +194,25 @@ this.logOut = function(){
       this.show = !this.show
     }
 
+// NAV STUFF
+this.getByStateProperty = function(property){
+  $http({
+    method: 'GET',
+    url: '/properties/' + property.state,
+  }).then(function(response){
+    controller.properties = response.data
+  })
+}
+
+this.getByCityProperty = function(property){
+  $http({
+    method: 'GET',
+    url: '/properties/' + property.city,
+  }).then(function(response){
+    controller.properties = response.data
+    console.log(response.data);
+  })
+}
     this.noModal = true;
 
   this.getProperties();
