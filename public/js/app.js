@@ -185,6 +185,7 @@ this.logOut = function(){
       this.show = !this.show
     }
 
+<<<<<<< HEAD
 //===================================================
 
     this.getByStateProperty = function(property){
@@ -206,6 +207,8 @@ this.logOut = function(){
       })
     }
 //===================================================
+=======
+>>>>>>> 98738428817e093f4dd7077b03098f5cc2fa10bf
     this.noModal = true;
 
   this.getProperties();
