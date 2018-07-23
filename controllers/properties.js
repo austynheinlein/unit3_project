@@ -107,6 +107,12 @@ router.get('/stpetersburg',(req,res)=>{
     });
 });
 
+router.get('/all',(req,res)=>{
+    Property.find({},null, {sort: {city: 1}}, (err, filteredProp)=>{
+      res.json(filteredProp);
+    });
+});
+
 // ========================NAV
 router.get('/:loc/low',(req,res)=>{
   console.log('INSIDE LOW ROUTE');

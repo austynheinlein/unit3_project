@@ -7,8 +7,7 @@
                 ng-mouseover="ctrl.chooseSearchParam(location='Seattle')" ng-click="ctrl.getSearchedProperties('Seattle') || ctrl.toggleClicked()">Seattle</button>
                 <button ng-mouseover="ctrl.chooseSearchParam(location='Florida')" ng-click="ctrl.getSearchedProperties('Florida') || ctrl.toggleClicked()">St. Petersburg</button>
                 <button ng-mouseover="ctrl.chooseSearchParam(location='Portland')" ng-click="ctrl.getSearchedProperties('Portland') || ctrl.toggleClicked()">Portland</button>
-                <button ng-mouseover="ctrl.chooseSearchParam(location='')" ng-click="ctrl.getSearchedProperties('all') || ctrl.toggleClicked()">All</button>
-
+                <button ng-mouseover="ctrl.chooseSearchParam(location='all')" ng-click="ctrl.getSearchedProperties('all') || ctrl.toggleClicked()">All</button>
               </div>
           </div>
           <div class="dropdown nav-item">
@@ -19,19 +18,13 @@
                 ng-mouseover="ctrl.chooseSearchParam(location='Maine')" ng-click="ctrl.getSearchedProperties('Maine') || ctrl.toggleClicked()">Maine</button>
                 <button
                 ng-mouseover="ctrl.chooseSearchParam(location='Washington')" ng-click="ctrl.getSearchedProperties('Washington') || ctrl.toggleClicked()">Washington</button>
-                <button ng-click="ctrl.getSearchedProperties('all') || ctrl.toggleClicked()">All</button>
+                <button ng-mouseover="ctrl.chooseSearchParam(location='all')"ng-click="ctrl.getSearchedProperties('all') || ctrl.toggleClicked()">All</button>
               </div>
           </div>
-
-
-  <label for="rent-up">Price Low to High</label>
-  <input type="radio"  value="rent" ng-model='order' id="rent-up" ng-click="ctrl.getRent('low')"/>
-  <label for="rent-down">Price High to Low</label>
-  <input type="radio"  value="-rent" ng-model='order'id="rent-down" ng-click="ctrl.getRent('high')"/>
-
-
-
+<!-- Radio Buttons -->
+            <label for="rent-up">Price Low to High</label>
+            <input type="radio"  value="rent" ng-model='order' id="rent-up" ng-click="ctrl.getRent('low')"/>
+            <label for="rent-down">Price High to Low</label>
+            <input type="radio"  value="-rent" ng-model='order'id="rent-down" ng-click="ctrl.getRent('high')"/>
     </div>
-
-
 </div>
