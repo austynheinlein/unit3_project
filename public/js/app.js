@@ -223,79 +223,52 @@ this.logOut = function(){
       this.show = !this.show
     }
 
-  {
+
 // NAV
 this.currentLocation = 'all';
 this.search ='';
 this.wasClicked = false;
 
-<<<<<<< HEAD
-  this.getSearchedProperties = function(search){
-    $http({
-      method:'GET',
-      url: '/properties/' + search
-    }).then(function(response){
-      controller.properties = response.data
-    })
-  }
+this.getSearchedProperties = function(search){
+
+  console.log('GET SEARCH');
+  console.log(search);
+  $http({
+    method:'GET',
+    url: '/properties/' + search
+  }).then(function(response){
+    controller.properties = response.data
+
+  })
+}
 
 this.toggleClicked = function(wasClicked){
+  console.log('hello')
     this.wasClicked = !this.wasClicked;
     console.log(this.wasClicked)
   }
 
 this.getRent = function(search){
+
+  console.log('get rent', this.wasClicked);
   $http({
     method:'GET',
     //url: '/properties/'+ search
     url: '/properties/'+ this.currentLocation + '/'+ search
   }).then(function(response){
     controller.properties = response.data
+
+    console.log(response.data);
   })
 }
 
 this.chooseSearchParam = function(currentLocation){
   console.log('Current Location')
     this.currentLocation = currentLocation;
+    console.log(currentLocation)
+
   }
-}
-=======
-    this.getSearchedProperties = function(search){
-      console.log('GET SEARCH');
-      console.log(search);
-      $http({
-        method:'GET',
-        url: '/properties/' + search
-      }).then(function(response){
-        controller.properties = response.data
-      })
-    }
-    // ================================CURRENT WORKING SECTION -ANDI
-        this.currentLocation = '';
-        this.search ='';
 
-        this.getRent = function(search){
-          // console.log('GET BY RENT');
-          // console.log(search);
-          // console.log('=============');
-          // console.log(this.currentLocation);
-          $http({
-            method:'GET',
-            //url: '/properties/'+ search
-            url: '/properties/'+ this.currentLocation + '/'+ search
-          }).then(function(response){
-            controller.properties = response.data
-            console.log(response.data);
-          })
-        }
-
-
-        this.chooseSearchParam = function(currentLocation){
-          console.log('Current Location')
-            this.currentLocation = currentLocation;
-            console.log(currentLocation)
-          }
->>>>>>> 44859b5aadcc9e3d576e5fc367c8aefde57b14ac
 
   this.noModal = true;
 

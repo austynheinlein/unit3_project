@@ -108,24 +108,25 @@ router.get('/stpetersburg',(req,res)=>{
 });
 
 // ========================NAV
-
 router.get('/:loc/low',(req,res)=>{
+  console.log('INSIDE LOW ROUTE');
   if (req.params.loc === 'Portland' || req.params.loc === 'Seattle' || req.params.loc === 'Stpetersburg'){
-    Property.find({city: {$in: [req.params.loc]}},null, {sort: {rent: -1}}, (err, filteredProp)=>{
+    Property.find({city: {$in: [req.params.loc]}},null, {sort: {rent: 1}}, (err, filteredProp)=>{
       console.log(err);
       res.json(filteredProp);
     });
   } else if (req.params.loc === 'all'){
-    Property.find({},null, {sort: {rent: -1}}, (err, filteredProp)=>{
+    Property.find({},null, {sort: {rent: 1}}, (err, filteredProp)=>{
       console.log(err);
       res.json(filteredProp);
     });
   } else {
-    Property.find({state: {$in: [req.params.loc]}},null, {sort: {rent: -1}}, (err, filteredProp)=>{
+    Property.find({state: {$in: [req.params.loc]}},null, {sort: {rent: 1}}, (err, filteredProp)=>{
       console.log(err);
       res.json(filteredProp);
     });
   }
+
 });
 
 router.get('/:loc/high',(req,res)=>{
@@ -147,19 +148,7 @@ router.get('/:loc/high',(req,res)=>{
     });
   }
 });
-// router.get('/low',(req,res)=>{
-//   console.log('filtered by low');
-//     Property.find({},null, {sort: {rent: 1}}, (err, filteredProp)=>{
-//       res.json(filteredProp);
-//     });
-// });
-//
-// router.get('/high',(req,res)=>{
-//   console.log(req.params);
-//     Property.find({},null, {sort: {rent: -1}}, (err, filteredProp)=>{
-//       res.json(filteredProp);
-//     });
-// });
+
 
 
 module.exports = router
