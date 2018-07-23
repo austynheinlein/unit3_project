@@ -68,7 +68,7 @@ this.logIn = function(){
           controller.user = response.config.data.username
             console.log(response);
         }, function(error){
-          alert('no such username in system, try again')
+          alert('no such username in system')
           console.log(error);
         })
     }
