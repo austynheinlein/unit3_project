@@ -208,38 +208,41 @@ this.logOut = function(){
       this.show = !this.show
     }
 
-    // NAV STUFF
+  {
+// NAV
+this.currentLocation = 'all';
+this.search ='';
+this.wasClicked = false;
 
-    this.getSearchedProperties = function(search){
-      console.log('GET SEARCH');
-      console.log(search);
-      $http({
-        method:'GET',
-        url: '/properties/' + search
-      }).then(function(response){
-        controller.properties = response.data
-      })
-    }
-    // ================================CURRENT WORKING SECTION
-    this.location = '';
-    this.search ='';
+  this.getSearchedProperties = function(search){
+    $http({
+      method:'GET',
+      url: '/properties/' + search
+    }).then(function(response){
+      controller.properties = response.data
+    })
+  }
 
-    this.getRent = function(search){
-      console.log('GET BY RENT');
-      console.log(search);
-      $http({
-        method:'GET',
-        url: '/properties/'+ search
-        //url: '/properties/'+ location + '/'+ search
-      }).then(function(response){
-        controller.properties = response.data
-      })
-    }
-    this.chooseSearchParam = function(location){
-      console.log('Current Location')
-        this.location = location;
-        console.log(location)
-      }
+this.toggleClicked = function(wasClicked){
+    this.wasClicked = !this.wasClicked;
+    console.log(this.wasClicked)
+  }
+
+this.getRent = function(search){
+  $http({
+    method:'GET',
+    //url: '/properties/'+ search
+    url: '/properties/'+ this.currentLocation + '/'+ search
+  }).then(function(response){
+    controller.properties = response.data
+  })
+}
+
+this.chooseSearchParam = function(currentLocation){
+  console.log('Current Location')
+    this.currentLocation = currentLocation;
+  }
+}
 
   this.noModal = true;
 
