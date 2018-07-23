@@ -73,8 +73,9 @@ button:focus {outline:0;}
   display: inline-block;
   color: #313131;
 }
-.cost label {
-  margin-left: 10px;
+label {
+  margin-left: 12px;
+  margin-right: 4px;
 }
 
 @media (max-width: 576px) {
