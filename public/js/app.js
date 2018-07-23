@@ -9,6 +9,10 @@ app.controller('MyController', ['$http', function($http){
   this.loggedOut =true;
   this.noCurrentUserPage = true;
 
+  if(this.loggedOut === true){
+    this.noCurrentUserPage = true;
+  }
+
 
   this.toggleModal = function(){
     this.modal = !this.modal
