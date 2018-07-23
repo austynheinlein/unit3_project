@@ -92,4 +92,32 @@ router.get('/stpetersburg',(req,res)=>{
     });
 });
 
+// ========================CURRENT WORKING SECTION
+// router.get('/:location/low',(req,res)=>{
+//   console.log('filtered by low');
+//     Property.find({city: req.params},null, {sort: {rent: 1}}, (err, filteredProp)=>{
+//       res.json(filteredProp);
+//     });
+// });
+//
+// router.get('/:location/high',(req,res)=>{
+//   console.log(req.params);
+//     Property.find({city: req.params},null, {sort: {rent: -1}}, (err, filteredProp)=>{
+//       res.json(filteredProp);
+//     });
+// });
+router.get('/low',(req,res)=>{
+  console.log('filtered by low');
+    Property.find({},null, {sort: {rent: 1}}, (err, filteredProp)=>{
+      res.json(filteredProp);
+    });
+});
+
+router.get('/high',(req,res)=>{
+  console.log(req.params);
+    Property.find({},null, {sort: {rent: -1}}, (err, filteredProp)=>{
+      res.json(filteredProp);
+    });
+});
+
 module.exports = router

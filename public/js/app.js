@@ -202,18 +202,38 @@ this.logOut = function(){
       this.show = !this.show
     }
 
-// NAV STUFF
+    // NAV STUFF
 
-this.getSearchedProperties = function(search){
-  console.log('GET SEARCH');
-  console.log(search);
-  $http({
-    method:'GET',
-    url: '/properties/' + search
-  }).then(function(response){
-    controller.properties = response.data
-  })
-}
+    this.getSearchedProperties = function(search){
+      console.log('GET SEARCH');
+      console.log(search);
+      $http({
+        method:'GET',
+        url: '/properties/' + search
+      }).then(function(response){
+        controller.properties = response.data
+      })
+    }
+    // ================================CURRENT WORKING SECTION
+    this.location = '';
+    this.search ='';
+
+    this.getRent = function(search){
+      console.log('GET BY RENT');
+      console.log(search);
+      $http({
+        method:'GET',
+        url: '/properties/'+ search
+        //url: '/properties/'+ location + '/'+ search
+      }).then(function(response){
+        controller.properties = response.data
+      })
+    }
+    this.chooseSearchParam = function(location){
+      console.log('Current Location')
+        this.location = location;
+        console.log(location)
+      }
 
   this.noModal = true;
 
