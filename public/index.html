@@ -99,7 +99,8 @@
       <div class= "" ng-include="'partials/search.html'"></div>
 
         <!-- DISPLAY LISTING AND DELETE FUNCTIONALITY -->
-        <div class="propertyImages">
+        <div ng-if="ctrl.noCurrentUserPage" class="propertyImages">
+          <button ng-if="ctrl.loggedIn" ng-click="ctrl.currentUserPage()">Show Page</button>
           <div class="favs">
             <h1>Current Listings</h1>
           </div>

@@ -7,6 +7,7 @@ app.controller('MyController', ['$http', function($http){
   this.loggedIn = false;
   this.noShow = true;
   this.loggedOut =true;
+  this.noCurrentUserPage = true;
 
 
   this.toggleModal = function(){
@@ -95,6 +96,7 @@ this.logOut = function(){
       url: '/sessions'
   }).then(
       function(response){
+        controller.noCurrentUserPage = true;
         controller.loggedIn = !controller.loggedIn
         console.log(response)
         controller.loggedOut = !controller.loggedOut
@@ -262,6 +264,10 @@ this.getRent = function(search){
   }).then(function(response){
     controller.properties = response.data
   })
+}
+
+this.currentUserPage = function(){
+  this.noCurrentUserPage = !this.noCurrentUserPage
 }
 
 this.chooseSearchParam = function(currentLocation){
