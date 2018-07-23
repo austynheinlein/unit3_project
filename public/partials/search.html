@@ -26,5 +26,9 @@
             <input type="radio"  value="rent" ng-model='order' id="rent-up" ng-click="ctrl.getRent('low')"/>
             <label for="rent-down">Price High to Low</label>
             <input type="radio"  value="-rent" ng-model='order'id="rent-down" ng-click="ctrl.getRent('high')"/>
+<!-- favorite properties button -->
+          <div class="showFavs">
+            <button ng-if="ctrl.loggedIn" ng-click="ctrl.currentUserPage()">My Favorites</button>
+          </div>
     </div>
 </div>
