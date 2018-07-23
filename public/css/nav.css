@@ -77,14 +77,38 @@ label {
   margin-left: 12px;
   margin-right: 4px;
 }
+.showFavs {
+  display: inline-block;
+}
+.showFavs button {
+  background: white;
+  color: #313131;
+  border: 1px solid #313131;
+  margin-left: 15px;
+  padding: 8px;
+}
+.showFavs button:hover {
+  background: #313131;
+  color: white;
+  border: 1px solid #313131;
+}
 
 @media (max-width: 576px) {
   .dropbtn{
     font-size: .7em;
-      padding: 5px;
+    padding: 5px;
+    margin: 15px 5px;
   }
   .dropdown-content {
-      min-width: 50px;
+    min-width: 50px;
+  }
+  .showFavs button {
+    margin: 0 5px;
+    padding: 8px;
+  }
+  .showFavs {
+    display: flex;
+    justify-content: center;
   }
 
 }
