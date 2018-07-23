@@ -68,7 +68,7 @@ router.put('/:id/dislike', (req, res)=>{
   Property.findById(req.params.id, (err, foundProperty)=>{
     console.log(foundProperty)
     let property = foundProperty;
-    User.findByIdAndUpdate( req.session.currentUser._id, {$pull: {properties: property}}, (err, updatedUser)=>{
+    User.findByIdAndUpdate( req.session.currentUser._id, {$pull: {properties: property}}, {return: true}, (err, updatedUser)=>{
       res.json(updatedUser)
       console.log(updatedUser)
     })

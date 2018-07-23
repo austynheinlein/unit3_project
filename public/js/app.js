@@ -157,7 +157,7 @@ this.logOut = function(){
 // Push one property into the user
     this.likeProperty = function(property){
       $http({
-        method: 'put',
+        method: 'PUT',
         url: '/properties/' + property._id + '/like',
         data: {
           property: property
@@ -172,8 +172,8 @@ this.logOut = function(){
     // Remove one property from the user
         this.dislikeProperty = function(property){
           $http({
-            method: 'put',
-            url: '/properties/' + property._id + '/like',
+            method: 'PUT',
+            url: '/properties/' + property._id + '/dislike',
             data: {
               property: property
             }
