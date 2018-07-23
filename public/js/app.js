@@ -157,7 +157,7 @@ this.logOut = function(){
 // Push one property into the user
     this.likeProperty = function(property){
       $http({
-        method: 'PUT',
+        method: 'put',
         url: '/properties/' + property._id + '/like',
         data: {
           property: property
@@ -172,7 +172,7 @@ this.logOut = function(){
     // Remove one property from the user
         this.dislikeProperty = function(property){
           $http({
-            method: 'PUT',
+            method: 'put',
             url: '/properties/' + property._id + '/dislike',
             data: {
               property: property
@@ -223,52 +223,43 @@ this.logOut = function(){
       this.show = !this.show
     }
 
+    // NAV STUFF
 
-// NAV
-this.currentLocation = 'all';
-this.search ='';
-this.wasClicked = false;
+    this.getSearchedProperties = function(search){
+      console.log('GET SEARCH');
+      console.log(search);
+      $http({
+        method:'GET',
+        url: '/properties/' + search
+      }).then(function(response){
+        controller.properties = response.data
+      })
+    }
+    // ================================CURRENT WORKING SECTION -ANDI
+        this.currentLocation = '';
+        this.search ='';
 
-this.getSearchedProperties = function(search){
+        this.getRent = function(search){
+          // console.log('GET BY RENT');
+          // console.log(search);
+          // console.log('=============');
+          // console.log(this.currentLocation);
+          $http({
+            method:'GET',
+            //url: '/properties/'+ search
+            url: '/properties/'+ this.currentLocation + '/'+ search
+          }).then(function(response){
+            controller.properties = response.data
+            console.log(response.data);
+          })
+        }
 
-  console.log('GET SEARCH');
-  console.log(search);
-  $http({
-    method:'GET',
-    url: '/properties/' + search
-  }).then(function(response){
-    controller.properties = response.data
 
-  })
-}
-
-this.toggleClicked = function(wasClicked){
-  console.log('hello')
-    this.wasClicked = !this.wasClicked;
-    console.log(this.wasClicked)
-  }
-
-this.getRent = function(search){
-
-  console.log('get rent', this.wasClicked);
-  $http({
-    method:'GET',
-    //url: '/properties/'+ search
-    url: '/properties/'+ this.currentLocation + '/'+ search
-  }).then(function(response){
-    controller.properties = response.data
-
-    console.log(response.data);
-  })
-}
-
-this.chooseSearchParam = function(currentLocation){
-  console.log('Current Location')
-    this.currentLocation = currentLocation;
-    console.log(currentLocation)
-
-  }
-
+        this.chooseSearchParam = function(currentLocation){
+          console.log('Current Location')
+            this.currentLocation = currentLocation;
+            console.log(currentLocation)
+          }
 
   this.noModal = true;
 

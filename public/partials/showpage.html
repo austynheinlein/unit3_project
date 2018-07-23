@@ -12,7 +12,7 @@
 
       <div class="showBtns">
         <button ng-if="ctrl.loggedIn" ng-click="ctrl.likeProperty(ctrl.property)">Like Property</button>
-        <button>Unlike Property</button>
+        <button ng-click="ctrl.dislikeProperty(ctrl.property)">Unlike Property</button>
         <button ng-click="ctrl.toggleShow()">Return Home</button>
       </div>
 
