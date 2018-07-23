@@ -214,7 +214,18 @@ this.getSearchedProperties = function(search){
     controller.properties = response.data
   })
 }
-
+// ================================CURRENT WORKING SECTION
+this.getRent = function(search){
+  console.log('GET BY RENT');
+  console.log(search);
+  $http({
+    method:'GET',
+    url: '/properties/' + search
+  }).then(function(response){
+    controller.properties = response.data
+  })
+}
+//=====================================
   this.noModal = true;
 
   this.getProperties();

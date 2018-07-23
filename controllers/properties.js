@@ -91,5 +91,17 @@ router.get('/stpetersburg',(req,res)=>{
       res.json(filteredProp);
     });
 });
+// ========================CURRETN WORKING SECTION
+router.get('/low',(req,res)=>{
+    Property.find({},null, {sort: {rent: 1}}, (err, filteredProp)=>{
+      res.json(filteredProp);
+    });
+});
 
+router.get('/high',(req,res)=>{
+    Property.find({},null, {sort: {rent: -1}}, (err, filteredProp)=>{
+      res.json(filteredProp);
+    });
+});
+//============================
 module.exports = router
