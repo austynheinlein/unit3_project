@@ -50,7 +50,7 @@ TBD...
 - As a user I can update my property listing information.
 
 
-## Contributors
+## Developers
   - Joseph Weber
     - https://github.com/joseph-weber
   - Austyn Heinlein

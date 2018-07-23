@@ -134,7 +134,7 @@ h2 {
 /* property images */
 /*********************************/
 
-.propertyImages, .currentUserProperties {
+.propertyImages {
   display: flex;
   flex-direction: row;
   flex-flow: wrap;
@@ -164,7 +164,7 @@ li img:hover {
   width: 100%;
 }
 .currentUserProperties li {
-  height: 18px;
+  /* height: 18px; */
   /* display: flex;
   justify-content: flex-start;
   text-align: left; */
@@ -259,4 +259,32 @@ li img:hover {
   display: flex;
   height: auto;
   width: 100px;
+}
+
+/*********************************/
+/* currentUserProperties */
+/*********************************/
+.favs {
+  margin: 10px;
+  width: 100%;
+  text-align: center;
+}
+.propertyImages {
+  margin-top: 0;
+}
+.currentUserProperties {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-top: 5px solid #313131;
+  height: auto;
+  padding-top: 15px;
+}
+.currentUserProperties .propertyData {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: white;
 }
