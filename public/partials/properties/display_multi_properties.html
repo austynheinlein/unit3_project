@@ -1,14 +1,30 @@
-<div ng-repeat="property in ctrl.properties">
-  <img ng-src="{{property.image}}" alt="{{property.address}}">
-  <br/>
-  {{property.rent}}
-  <br/>
-  {{property.address}}
-  <br/>
-  {{property.city}}
-  <br/>
-  {{property.state}}
-  <br/>
+
+  <ul>
+    <li>
+      <div ng-click="ctrl.toggleShow(); ctrl.chooseOneShowProperty(property)" class="propertyImg">
+      <img src="{{property.image}}" alt="apartment image"/>
+    </li>
+    <div class="belowImg">
+      <div class="propertyData">
+        <li>
+          <span>RENT:</span> ${{property.rent}}
+        </li>
+        <li>
+          {{property.address}}
+        </li>
+        <li>
+          {{property.city}}
+        </li>
+        <li>
+          {{property.state}}
+        </li>
+      </div>
+      <div class="buttons">
+        <button ng-if="ctrl.loggedIn" class="myButton" ng-mouseover="ctrl.chooseOneProperty(property)" ng-click="ctrl.toggleModal()">Update Listing</button>
+        <button ng-if="ctrl.loggedIn"  class="myButton" ng-click="ctrl.deleteProperty(property)">Delete Listing</button>
+      </div>
+    </div>
 </div>
+
 <!-- FOR INDEX.HTML -->
 <!-- <div ng-include="''/partials/properties/display_multi_properties.html'"></div> -->
