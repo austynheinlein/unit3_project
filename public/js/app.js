@@ -115,6 +115,7 @@ this.logOut = function(){
             zip: this.zip
           }
       }).then(function(response){
+          document.getElementById("createProperty").reset()
           controller.getProperties();
           controller.toggleCreateModal();
           // console.log('hi')
