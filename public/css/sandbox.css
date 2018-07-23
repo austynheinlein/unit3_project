@@ -4,18 +4,54 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 .containDiv ul {
   width: 100%;
+  margin: 0;
 }
 
-#imgLine {
+.imgLine {
   width: 100%;
   margin: 0 auto;
 }
 
-#showImg {
+.showImg {
   width: 100%;
-  height: 100%;
+  height: auto;
+}
+.underImg {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 15px;
+  border: 2px solid #313131;
+  text-align: left;
+}
+.showBtns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px;
+}
+.showBtns button {
+  margin-left: 10px;
+  margin-right: 10px;
+  background: #313131;
+  color: white;
+  border: 1px solid #313131;
+}
+.showBtns button:hover {
+  color: #eafb8a;
+  border: 1px solid #eafb8a;
+}
+.containDiv p {
+  margin-top: 15px;
+}
+#googleMap {
+  background: #ededed;
+  border: 20px solid white;
+  border-top: none;
 }

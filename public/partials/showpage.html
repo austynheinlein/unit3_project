@@ -1,20 +1,26 @@
 
-<div class="container">
+<!-- <div class="container"> -->
   <!-- LOGO --><!-- CREATE USER --><!-- CREATE LOGIN --><!-- LOG OUT BUTTON -->
 
   <!-- HEADER -->
-<div class= "header" ng-include="'partials/header.html'"></div>
+<!-- <div class= "header" ng-include="'partials/header.html'"></div> -->
 <!-- CREATE NEW PROP BUTTON -->
-<div class="new-prop" ng-include="'/partials/properties/create_property.html'"></div>
+<!-- <div class="new-prop" ng-include="'/partials/properties/create_property.html'"></div> -->
 <div class="containDiv">
-  <div>
     <ul>
-      <li id="imgLine"><img id="showImg" src="{{ctrl.property.image}}"/></li>
-      <button ng-if="ctrl.loggedIn" ng-click="ctrl.likeProperty(ctrl.property)">Like this property</button>
+      <li class="imgLine"><img class="showImg" src="{{ctrl.property.image}}"/></li>
+
+      <div class="showBtns">
+        <button ng-if="ctrl.loggedIn" ng-click="ctrl.likeProperty(ctrl.property)">Like this Property</button>
+
+        <button ng-click="ctrl.toggleShow()">Return Home</button>
+      </div>
+
     </ul>
-  </div>
-  <div>
+
+  <div class="underImg">
   <ul>
+    <div class="propdata">
       <li>Rent: {{ctrl.property.rent}}</li>
       <li>Square Feet: {{ctrl.property.sqft}}</li>
       <li>Address: {{ctrl.property.address}} {{ctrl.property.city}}, {{ctrl.property.state}}
@@ -22,11 +28,12 @@
       {{ctrl.property.zip}}  </li>
       <li>Beds: {{ctrl.property.beds}}</li>
       <li>Baths: {{ctrl.property.baths}}</li>
-      <li><button ng-click="ctrl.toggleShow()">Return Home</button>
+    </div>
+      <!-- <li><button ng-click="ctrl.toggleShow()">Return Home</button> -->
     </ul>
     <p>About: {{ctrl.property.description}}</p>
   </div>
-  <h1>My First Google Map</h1>
+  <h2>My First Google Map</h2>
 
-<div id="googleMap" style="width:100%;height:400px;"></div>
+<div id="googleMap" style="width:100%;height:200px;"></div>
 </div>
