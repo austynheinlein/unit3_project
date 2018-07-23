@@ -1,6 +1,9 @@
 .containDiv {
-  width: 80%;
-  height: 100%;
+  width: 1500px;
+  height: 1500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .containDiv ul {
@@ -9,8 +12,10 @@
 
 #imgLine {
   width: 100%;
+  margin: 0 auto;
 }
 
 #showImg {
-  height: auto;
+  width: 1500px;
+  height: 1000px;
 }

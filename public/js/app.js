@@ -5,6 +5,8 @@ app.controller('MyController', ['$http', function($http){
   const controller = this;
   this.modal = false;
   this.loggedIn = false;
+  this.noShow = true;
+
 
   this.toggleModal = function(){
     this.modal = !this.modal
@@ -58,13 +60,18 @@ this.logIn = function(){
           data: {
               username:this.username,
               password:this.password,
-              properties: []
+              properties: this.properties
           }
         }).then(function(response){
           controller.loggedIn = !controller.loggedIn
           controller.userdata = response
           controller.user = response.config.data.username
+          controller.currentUserProperties = response.config.data.properties
+          console.log(controller.currentUserProperties)
             console.log(response);
+        }, function(error){
+          alert('no such username in system')
+          console.log(error);
         })
     }
 
@@ -191,6 +198,7 @@ this.logOut = function(){
     this.show = false;
 
     this.toggleShow = function(property){
+      this.noShow = !this.noShow
       this.show = !this.show
     }
 
