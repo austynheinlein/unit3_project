@@ -67,9 +67,19 @@ button:focus {outline:0;}
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
+.cost {
+  width: 300px;
+  margin: 0;
+  display: inline-block;
+  color: #313131;
+}
+.cost label {
+  margin-left: 10px;
+}
+
 @media (max-width: 576px) {
   .dropbtn{
-    font-size: .5em;
+    font-size: .7em;
       padding: 5px;
   }
   .dropdown-content {
