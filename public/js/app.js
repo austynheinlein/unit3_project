@@ -164,6 +164,7 @@ this.logOut = function(){
         }
       }).then(function(response){
         console.log(response)
+        controller.currentUserProperties.push(response.config.data.property)
       }, function(error){
         console.log(error)
       })
@@ -179,6 +180,8 @@ this.logOut = function(){
             }
           }).then(function(response){
             console.log(response)
+            let index = controller.currentUserProperties.indexOf(property)
+            controller.currentUserProperties.splice(index, 1)
           }, function(error){
             console.log(error)
           })
