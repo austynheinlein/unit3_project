@@ -109,6 +109,8 @@ label {
   .showFavs {
     display: flex;
     justify-content: center;
+    flex-direction: row;
+    margin: 5px;
   }
 
 }
