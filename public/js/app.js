@@ -169,6 +169,21 @@ this.logOut = function(){
       })
     }
 
+    // Remove one property from the user
+        this.dislikeProperty = function(property){
+          $http({
+            method: 'put',
+            url: '/properties/' + property._id + '/like',
+            data: {
+              property: property
+            }
+          }).then(function(response){
+            console.log(response)
+          }, function(error){
+            console.log(error)
+          })
+        }
+
 
     // Update logic
         this.updateProperty = function(property){
@@ -214,6 +229,7 @@ this.currentLocation = 'all';
 this.search ='';
 this.wasClicked = false;
 
+<<<<<<< HEAD
   this.getSearchedProperties = function(search){
     $http({
       method:'GET',
@@ -243,6 +259,43 @@ this.chooseSearchParam = function(currentLocation){
     this.currentLocation = currentLocation;
   }
 }
+=======
+    this.getSearchedProperties = function(search){
+      console.log('GET SEARCH');
+      console.log(search);
+      $http({
+        method:'GET',
+        url: '/properties/' + search
+      }).then(function(response){
+        controller.properties = response.data
+      })
+    }
+    // ================================CURRENT WORKING SECTION -ANDI
+        this.currentLocation = '';
+        this.search ='';
+
+        this.getRent = function(search){
+          // console.log('GET BY RENT');
+          // console.log(search);
+          // console.log('=============');
+          // console.log(this.currentLocation);
+          $http({
+            method:'GET',
+            //url: '/properties/'+ search
+            url: '/properties/'+ this.currentLocation + '/'+ search
+          }).then(function(response){
+            controller.properties = response.data
+            console.log(response.data);
+          })
+        }
+
+
+        this.chooseSearchParam = function(currentLocation){
+          console.log('Current Location')
+            this.currentLocation = currentLocation;
+            console.log(currentLocation)
+          }
+>>>>>>> 44859b5aadcc9e3d576e5fc367c8aefde57b14ac
 
   this.noModal = true;
 
