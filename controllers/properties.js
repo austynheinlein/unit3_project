@@ -52,13 +52,29 @@ router.put('/:id/like', (req, res)=>{
   Property.findById(req.params.id, (err, foundProperty)=>{
     console.log(foundProperty)
     let property = foundProperty;
-    User.findByIdAndUpdate( req.session.currentUser._id, {$push: {properties: property}}, (err, updatedUser)=>{
-      res.json(updatedUser)
-      console.log(updatedUser)
+    User.findByIdAndUpdate( req.session.currentUser._id, {pull: {properties: property}}, (err, updatedPullUser)=>{
+    User.findByIdAndUpdate( req.session.currentUser._id, {$push: {properties: property}}, (err, updatedPushUser)=>{
+      console.log(updatedPullUser)
+      console.log('---------------break---------------');
+      console.log(updatedPushUser)
+      res.json(updatedPushUser)
   })
+})
   });
 });
 
+
+router.put('/:id/dislike', (req, res)=>{
+  Property.findById(req.params.id, (err, foundProperty)=>{
+    console.log(foundProperty)
+    let property = foundProperty;
+    User.findById
+    User.findByIdAndUpdate( req.session.currentUser._id, {$pull: {properties: property}}, (err, updatedUser)=>{
+      res.json(updatedUser)
+      console.log(updatedUser)
+    })
+  })
+  })
 
 router.get('/florida',(req,res)=>{
     Property.find({state: {$in: ['Florida']}},null, {sort: {city: 1}}, (err, filteredProp)=>{

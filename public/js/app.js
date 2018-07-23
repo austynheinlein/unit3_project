@@ -42,7 +42,8 @@ app.controller('MyController', ['$http', function($http){
       url: '/users',
       data: {
         username: this.username,
-        password: this.password
+        password: this.password,
+        properties: []
       }
     }).then(function(response){
       console.log(response);
@@ -59,15 +60,18 @@ this.logIn = function(){
           url:'/sessions',
           data: {
               username:this.username,
-              password:this.password,
-              properties: this.properties
+              password:this.password
           }
         }).then(function(response){
           controller.loggedIn = !controller.loggedIn
-          controller.userdata = response
+          controller.currentUserProperties = response.data.user.properties
           controller.user = response.config.data.username
-          controller.currentUserProperties = response.config.data.properties
+          console.log('------------------------')
           console.log(controller.currentUserProperties)
+          console.log('------------------------')
+          console.log('------------------------')
+          console.log(controller.currentUserProperties)
+          console.log('------------------------')
             console.log(response);
         }, function(error){
           alert('no such username in system')
@@ -111,6 +115,7 @@ this.logOut = function(){
             zip: this.zip
           }
       }).then(function(response){
+          document.getElementById("createProperty").reset()
           controller.getProperties();
           controller.toggleCreateModal();
           // console.log('hi')
@@ -163,6 +168,7 @@ this.logOut = function(){
         console.log(error)
       })
     }
+
 
     // Update logic
         this.updateProperty = function(property){
