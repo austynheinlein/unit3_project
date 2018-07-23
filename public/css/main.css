@@ -94,7 +94,7 @@ input:focus {
   padding-left: 5px;
 }
 .logout button {
-  width: 150px;
+  width: 152px;
 }
 .login input[type=submit], .user input[type=submit], .logout button {
   background: #313131;
