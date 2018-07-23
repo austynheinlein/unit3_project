@@ -220,26 +220,31 @@ this.logOut = function(){
         controller.properties = response.data
       })
     }
-    // ================================CURRENT WORKING SECTION
-    this.location = '';
-    this.search ='';
+    // ================================CURRENT WORKING SECTION -ANDI
+        this.currentLocation = '';
+        this.search ='';
 
-    this.getRent = function(search){
-      console.log('GET BY RENT');
-      console.log(search);
-      $http({
-        method:'GET',
-        url: '/properties/'+ search
-        //url: '/properties/'+ location + '/'+ search
-      }).then(function(response){
-        controller.properties = response.data
-      })
-    }
-    this.chooseSearchParam = function(location){
-      console.log('Current Location')
-        this.location = location;
-        console.log(location)
-      }
+        this.getRent = function(search){
+          // console.log('GET BY RENT');
+          // console.log(search);
+          // console.log('=============');
+          // console.log(this.currentLocation);
+          $http({
+            method:'GET',
+            //url: '/properties/'+ search
+            url: '/properties/'+ this.currentLocation + '/'+ search
+          }).then(function(response){
+            controller.properties = response.data
+            console.log(response.data);
+          })
+        }
+
+
+        this.chooseSearchParam = function(currentLocation){
+          console.log('Current Location')
+            this.currentLocation = currentLocation;
+            console.log(currentLocation)
+          }
 
   this.noModal = true;
 

@@ -2,31 +2,41 @@
   <div class="dropdown" ng-model='searchBox'>
             <button class="dropbtn nav-item">City</button>
               <div class="dropdown-content">
-                <button ng-click="ctrl.getSearchedProperties('seattle')">Seattle</button>
-                <button ng-click="ctrl.getSearchedProperties('stpetersburg')">St. Petersburg</button>
-                <button ng-click="ctrl.getSearchedProperties('portland')">Portland</button>
-                <button ng-click="ctrl.getSearchedProperties('')">All</button>
+                <button
+                ng-mouseover="ctrl.chooseSearchParam(location='Seattle')" ng-click="ctrl.getSearchedProperties('Seattle')">Seattle</button>
+                <button ng-mouseover="ctrl.chooseSearchParam(location='Stpetersburg')" ng-click="ctrl.getSearchedProperties('Stpetersburg')">St. Petersburg</button>
+                <button ng-mouseover="ctrl.chooseSearchParam(location='Maine')" ng-click="ctrl.getSearchedProperties('Portland')">Portland</button>
+                <button ng-mouseover="ctrl.chooseSearchParam(location='')" ng-click="ctrl.getSearchedProperties('')">All</button>
 
               </div>
           </div>
           <div class="dropdown nav-item">
             <button class="dropbtn">State</button>
               <div class="dropdown-content">
-                <button ng-click="ctrl.getSearchedProperties('florida')">Florida</button>
-                <button ng-click="ctrl.getSearchedProperties('maine')">Maine</button>
-                <button ng-click="ctrl.getSearchedProperties('washington')">Washington</button>
+                <button ng-mouseover="ctrl.chooseSearchParam(location='Florida')" ng-click="ctrl.getSearchedProperties('Florida')">Florida</button>
+                <button
+                ng-mouseover="ctrl.chooseSearchParam(location='Maine')" ng-click="ctrl.getSearchedProperties('Maine')">Maine</button>
+                <button
+                ng-mouseover="ctrl.chooseSearchParam(location='Washington')" ng-click="ctrl.getSearchedProperties('Washington')">Washington</button>
                 <button ng-click="ctrl.getSearchedProperties('')">All</button>
               </div>
           </div>
-          <label for="Search by">
-			         <input type='text' placeholder='Product Name' ng-model='searchBox' >
-		       </label>
+<!-- ===============CURRENT WORKING SECTION=========== ANDI-->
 
-           <div class="cost">
-             <label for="rent-up">Rent Low to High</label>
-       			<input type="radio" name="order" value="rent" ng-model='order' id="rent-up"/>
-       			<label for="rent-down">Rent High to Low</label>
-       			<input type="radio" name="order" value="-rent" ng-model='order'id="rent-down"/>
-           </div>
+  <label for="rent-up">Price Low to High</label>
+  <input type="radio"  value="rent" ng-model='order' id="rent-up" ng-click="ctrl.getRent('low')"/>
+  <label for="rent-down">Price High to Low</label>
+  <input type="radio"  value="-rent" ng-model='order'id="rent-down" ng-click="ctrl.getRent('high')"/>
 
+
+<!-- ================================================== -->
     </div>
+<!-- filter: searchBox | orderBy: order in the property ng-repeat -->
+
+</div>
+
+<!-- ng-click="ctrl.getRent('high')"-->
+<!-- ng-click="ctrl.getRent('low')" -->
+
+<!-- FOR INDEX.HTML -->
+<!-- <div ng-include="'/partials/search.html'"></div> -->
