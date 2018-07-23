@@ -265,12 +265,18 @@ li img:hover {
 /* currentUserProperties */
 /*********************************/
 .favs {
-  margin: 10px;
+  margin: 10px 0px;
   width: 100%;
   text-align: center;
+  background: white;
+}
+.propertyImages h1 {
+  margin-top: 10px;
+  padding:5px;
 }
 .propertyImages {
   margin-top: 0;
+  border-top: 5px solid #313131;
 }
 .currentUserProperties {
   display: flex;
