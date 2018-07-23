@@ -163,7 +163,7 @@ li img:hover {
   margin-top: 5px;
   width: 100%;
 }
-.propertyData li {
+.currentUserProperties li {
   height: 18px;
   /* display: flex;
   justify-content: flex-start;
