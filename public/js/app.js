@@ -58,8 +58,6 @@ app.controller('MyController', ['$http', function($http){
 //Create Session (Log-in)
 
 this.logIn = function(){
-  document.getElementById("createUser").reset()
-  document.getElementById("loggedInUser").reset()
       $http({
           method:'POST',
           url:'/sessions',
@@ -70,6 +68,8 @@ this.logIn = function(){
         }).then(function(response){
           controller.loggedOut = !controller.loggedOut
           controller.loggedIn = !controller.loggedIn
+          document.getElementById("createUser").reset()
+          document.getElementById("loggedInUser").reset()
           controller.currentUserProperties = response.data.user.properties
           controller.user = response.config.data.username
           console.log('------------------------')
