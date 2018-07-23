@@ -37,6 +37,8 @@ app.controller('MyController', ['$http', function($http){
 
 //CREATE USER
   this.createUser = function(){
+    document.getElementById("createUser").reset()
+    document.getElementById("loggedInUser").reset()
     console.log('function working');
     $http({
       method: 'POST',
@@ -56,6 +58,8 @@ app.controller('MyController', ['$http', function($http){
 //Create Session (Log-in)
 
 this.logIn = function(){
+  document.getElementById("createUser").reset()
+  document.getElementById("loggedInUser").reset()
       $http({
           method:'POST',
           url:'/sessions',
