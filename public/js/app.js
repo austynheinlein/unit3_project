@@ -222,45 +222,41 @@ this.logOut = function(){
       this.noShow = !this.noShow
       this.show = !this.show
     }
+// NAV
 
-    // NAV STUFF
+this.getSearchedProperties = function(search){
 
-    this.getSearchedProperties = function(search){
-      console.log('GET SEARCH');
-      console.log(search);
-      $http({
-        method:'GET',
-        url: '/properties/' + search
-      }).then(function(response){
-        controller.properties = response.data
-      })
-    }
-    // ================================CURRENT WORKING SECTION -ANDI
-        this.currentLocation = '';
-        this.search ='';
+  console.log('GET SEARCH');
+  console.log(search);
+  $http({
+    method:'GET',
+    url: '/properties/' + search
+  }).then(function(response){
+    controller.properties = response.data
+  })
+}
 
-        this.getRent = function(search){
-          // console.log('GET BY RENT');
-          // console.log(search);
-          // console.log('=============');
-          // console.log(this.currentLocation);
-          $http({
-            method:'GET',
-            //url: '/properties/'+ search
-            url: '/properties/'+ this.currentLocation + '/'+ search
-          }).then(function(response){
-            controller.properties = response.data
-            console.log(response.data);
-          })
-        }
+this.currentLocation = 'all';
+this.search ='';
+this.wasClicked = false;
 
+this.toggleClicked = function(wasClicked){
+    this.wasClicked = !this.wasClicked;
+  }
 
-        this.chooseSearchParam = function(currentLocation){
-          console.log('Current Location')
-            this.currentLocation = currentLocation;
-            console.log(currentLocation)
-          }
+this.getRent = function(search){
+  $http({
+    method:'GET',
+    //url: '/properties/'+ search
+    url: '/properties/'+ this.currentLocation + '/'+ search
+  }).then(function(response){
+    controller.properties = response.data
+  })
+}
 
+this.chooseSearchParam = function(currentLocation){
+    this.currentLocation = currentLocation;
+  }
   this.noModal = true;
 
   this.getProperties();
