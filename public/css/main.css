@@ -118,14 +118,14 @@ input:focus {
   background: #313131;
   color: white;
   border: none;
-  padding: 4px;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.new-prop button:hover {
+/* .new-prop button:hover {
   color: #eafb8a;
-}
+} */
 h2 {
   font-size: 15px;
 }
