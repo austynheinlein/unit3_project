@@ -108,32 +108,49 @@ router.get('/stpetersburg',(req,res)=>{
     });
 });
 
-// ========================CURRENT WORKING SECTION
+// ========================CURRENT WORKING SECTION -ANDI
 // router.get('/:location/low',(req,res)=>{
 //   console.log('filtered by low');
-//     Property.find({city: req.params},null, {sort: {rent: 1}}, (err, filteredProp)=>{
+//     Property.find({},null, {sort: {rent: 1}}, (err, filteredProp)=>{
+//       console.log('******************');
+//       console.log(err);
 //       res.json(filteredProp);
-//     });
-// });
 //
-// router.get('/:location/high',(req,res)=>{
-//   console.log(req.params);
-//     Property.find({city: req.params},null, {sort: {rent: -1}}, (err, filteredProp)=>{
-//       res.json(filteredProp);
 //     });
 // });
-router.get('/low',(req,res)=>{
-  console.log('filtered by low');
-    Property.find({},null, {sort: {rent: 1}}, (err, filteredProp)=>{
+router.get('/:loc/low',(req,res)=>{
+  console.log('INSIDE LOW ROUTE');
+    Property.find({state: {$in: [req.params.loc]}},null, {sort: {rent: 1}}, (err, filteredProp)=>{
+      console.log('&&&&&&&&&&&&&&&&&&');
+      console.log(req.params.loc);
+      console.log('******************');
+      console.log(err);
       res.json(filteredProp);
     });
 });
 
-router.get('/high',(req,res)=>{
-  console.log(req.params);
-    Property.find({},null, {sort: {rent: -1}}, (err, filteredProp)=>{
+router.get('/:loc/high',(req,res)=>{
+  console.log('INSIDE HIGH ROUTE');
+    Property.find({state: {$in: [req.params.loc]}},null, {sort: {rent: -1}}, (err, filteredProp)=>{
+      console.log('&&&&&&&&&&&&&&&&&&');
+      console.log(req.params.loc);
+      console.log('******************');
+      console.log(err);
       res.json(filteredProp);
     });
 });
+// router.get('/low',(req,res)=>{
+//   console.log('filtered by low');
+//     Property.find({},null, {sort: {rent: 1}}, (err, filteredProp)=>{
+//       res.json(filteredProp);
+//     });
+// });
+//
+// router.get('/high',(req,res)=>{
+//   console.log(req.params);
+//     Property.find({},null, {sort: {rent: -1}}, (err, filteredProp)=>{
+//       res.json(filteredProp);
+//     });
+// });
 
 module.exports = router
