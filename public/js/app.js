@@ -215,24 +215,29 @@ this.logOut = function(){
       })
     }
     // ================================CURRENT WORKING SECTION
-    this.location = '';
+    this.currentLocation = '';
     this.search ='';
 
     this.getRent = function(search){
-      console.log('GET BY RENT');
-      console.log(search);
+      // console.log('GET BY RENT');
+      // console.log(search);
+      // console.log('=============');
+      // console.log(this.currentLocation);
       $http({
         method:'GET',
-        url: '/properties/'+ search
-        //url: '/properties/'+ location + '/'+ search
+        //url: '/properties/'+ search
+        url: '/properties/'+ this.currentLocation + '/'+ search
       }).then(function(response){
         controller.properties = response.data
+        console.log(response.data);
       })
     }
-    this.chooseSearchParam = function(location){
+
+
+    this.chooseSearchParam = function(currentLocation){
       console.log('Current Location')
-        this.location = location;
-        console.log(location)
+        this.currentLocation = currentLocation;
+        console.log(currentLocation)
       }
 
   this.noModal = true;
