@@ -211,6 +211,7 @@ this.logOut = function(){
     // NAV STUFF
 
     this.getSearchedProperties = function(search){
+
       console.log('GET SEARCH');
       console.log(search);
       $http({
@@ -218,33 +219,40 @@ this.logOut = function(){
         url: '/properties/' + search
       }).then(function(response){
         controller.properties = response.data
+
       })
     }
-    // ================================CURRENT WORKING SECTION -ANDI
-        this.currentLocation = '';
-        this.search ='';
+// ================================CURRENT WORKING SECTION -ANDI
+  this.currentLocation = '';
+  this.search ='';
+  this.wasClicked = false;
 
-        this.getRent = function(search){
-          // console.log('GET BY RENT');
-          // console.log(search);
-          // console.log('=============');
-          // console.log(this.currentLocation);
-          $http({
-            method:'GET',
-            //url: '/properties/'+ search
-            url: '/properties/'+ this.currentLocation + '/'+ search
-          }).then(function(response){
-            controller.properties = response.data
-            console.log(response.data);
-          })
-        }
+  this.toggleClicked = function(wasClicked){
+    console.log('hello')
+      this.wasClicked = !this.wasClicked;
+      console.log(this.wasClicked)
+    }
 
+  this.getRent = function(search){
 
-        this.chooseSearchParam = function(currentLocation){
-          console.log('Current Location')
-            this.currentLocation = currentLocation;
-            console.log(currentLocation)
-          }
+    console.log('get rent', this.wasClicked);
+    $http({
+      method:'GET',
+      //url: '/properties/'+ search
+      url: '/properties/'+ this.currentLocation + '/'+ search
+    }).then(function(response){
+      controller.properties = response.data
+
+      console.log(response.data);
+    })
+  }
+
+  this.chooseSearchParam = function(currentLocation){
+    console.log('Current Location')
+      this.currentLocation = currentLocation;
+      console.log(currentLocation)
+
+    }
 
   this.noModal = true;
 
