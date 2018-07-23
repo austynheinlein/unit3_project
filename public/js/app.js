@@ -60,8 +60,8 @@ this.logIn = function(){
           method:'POST',
           url:'/sessions',
           data: {
-              username:this.username,
-              password:this.password
+              username:this.logInUsername,
+              password:this.logInPassword
           }
         }).then(function(response){
           controller.loggedOut = !controller.loggedOut
