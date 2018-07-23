@@ -60,12 +60,14 @@ this.logIn = function(){
           data: {
               username:this.username,
               password:this.password,
-              properties: []
+              properties: this.properties
           }
         }).then(function(response){
           controller.loggedIn = !controller.loggedIn
           controller.userdata = response
           controller.user = response.config.data.username
+          controller.currentUserProperties = response.config.data.properties
+          console.log(controller.currentUserProperties)
             console.log(response);
         }, function(error){
           alert('no such username in system')

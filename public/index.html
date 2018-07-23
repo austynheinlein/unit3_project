@@ -130,6 +130,35 @@
         </div>
         </div>
         </div>
+        <div ng-if="ctrl.loggedIn" class="propertyImages">
+          <h1>Current User Properties</h1>
+        <div ng-repeat="property in ctrl.currentUserProperties">
+          <div class="propertyData">
+            <ul>
+              <li>
+                <div ng-click="ctrl.toggleShow(); ctrl.chooseOneShowProperty(property)" class="propertyImg">
+                <img ng-src="{{property.image}}" alt="apartment image"/>
+              </li>
+            </div>
+              <div class="belowImg">
+                <div class="propertyData">
+                  <li>
+                    <span>RENT:</span> ${{property.rent}}
+                  </li>
+                  <li>
+                    {{property.address}}
+                  </li>
+                  <li>
+                    {{property.city}}
+                  </li>
+                  <li>
+                    {{property.state}}
+                  </li>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
         <div ng-if="ctrl.show" ng-include="'partials/showpage.html'">
           </div>
         <!-- FOOTER -->
