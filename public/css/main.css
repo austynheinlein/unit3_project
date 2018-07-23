@@ -264,6 +264,10 @@ li img:hover {
 /*********************************/
 /* currentUserProperties */
 /*********************************/
+.containDiv {
+  border-top: 20px solid #313131;
+  padding-top: 10px;
+}
 .favs {
   margin-bottom: 10px;
   width: 100%;
@@ -288,6 +292,7 @@ h1 {
   align-items: center;
   border-top: 5px solid #313131;
   height: auto;
+  width: 100%;
   /* padding-top: 15px; */
 }
 .currentUserProperties .propertyData {
