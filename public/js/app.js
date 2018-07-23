@@ -67,6 +67,8 @@ this.logIn = function(){
           controller.userdata = response
           controller.user = response.config.data.username
             console.log(response);
+        }, function(error){
+          console.log(error);
         })
     }
 
