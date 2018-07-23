@@ -87,7 +87,7 @@
         </div>
 
   <!-- CONTAINER -->
-    <div class="container" ng-if="ctrl.noModal; ctrl.noShow">
+    <div class="container" ng-if="ctrl.noModal && ctrl.noShow">
       <!-- LOGO --><!-- CREATE USER --><!-- CREATE LOGIN --><!-- LOG OUT BUTTON -->
 
       <!-- HEADER -->
@@ -100,6 +100,9 @@
 
         <!-- DISPLAY LISTING AND DELETE FUNCTIONALITY -->
         <div class="propertyImages">
+          <div class="favs">
+            <h1>Current Listings</h1>
+          </div>    
           <div class="property" ng-repeat="property in ctrl.properties |filter: searchBox | orderBy: order">
             <ul>
               <li>
@@ -122,7 +125,7 @@
                   </li>
                 </div>
                 <div class="buttons">
-                  <button ng-if="ctrl.loggedIn" class="myButton" ng-click="ctrl.chooseOneProperty(property)" ng-click="ctrl.toggleModal()">Update Listing</button>
+                  <button ng-if="ctrl.loggedIn" class="myButton" ng-click="ctrl.chooseOneProperty(property); ctrl.toggleModal()">Update Listing</button>
                   <button ng-if="ctrl.loggedIn"  class="myButton" ng-click="ctrl.deleteProperty(property)">Delete Listing</button>
                 </div>
               </div>
@@ -131,7 +134,10 @@
         </div>
       </div>
 
-      <div class="currentUserProperties" ng-if="ctrl.loggedIn">
+      <div class="currentUserProperties" ng-if="ctrl.loggedIn && ctrl.noModal && ctrl.noShow">
+        <div class="favs">
+          <h1>Favorite Listings</h1>
+        </div>
         <div class="property" ng-repeat="property in ctrl.currentUserProperties">
           <!-- <div class="propertyData"> -->
             <ul>

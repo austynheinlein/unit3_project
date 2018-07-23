@@ -264,6 +264,14 @@ li img:hover {
 /*********************************/
 /* currentUserProperties */
 /*********************************/
+.favs {
+  margin: 10px;
+  width: 100%;
+  text-align: center;
+}
+.propertyImages {
+  margin-top: 0;
+}
 .currentUserProperties {
   display: flex;
   flex-direction: row;
