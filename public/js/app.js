@@ -6,6 +6,7 @@ app.controller('MyController', ['$http', function($http){
   this.modal = false;
   this.loggedIn = false;
   this.noShow = true;
+  this.loggedOut =true;
 
 
   this.toggleModal = function(){
@@ -63,6 +64,7 @@ this.logIn = function(){
               password:this.password
           }
         }).then(function(response){
+          controller.loggedOut = !controller.loggedOut
           controller.loggedIn = !controller.loggedIn
           controller.currentUserProperties = response.data.user.properties
           controller.user = response.config.data.username
@@ -91,6 +93,7 @@ this.logOut = function(){
       function(response){
         controller.loggedIn = !controller.loggedIn
         console.log(response)
+        controller.loggedOut = !controller.loggedOut
       },
       function(error){
         console.log(error);

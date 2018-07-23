@@ -5,7 +5,7 @@
   </div>
   <div class="session">
     <div class="create-login">
-      <div class="user">
+      <div class="user" ng-if="ctrl.loggedOut">
         <!-- CREATE USER -->
           <h2>Create User</h2>
           <form ng-submit='ctrl.createUser()'>
@@ -15,7 +15,7 @@
             <input type="submit" value="Create User">
           </form>
       </div>
-      <div class="login">
+      <div class="login" ng-if="ctrl.loggedOut">
         <!-- CREATE LOGIN -->
           <h2>Log In</h2>
           <form ng-submit='ctrl.logIn()'>
@@ -25,7 +25,7 @@
           </form>
       </div>
     </div>
-    <div class="logout">
+    <div ng-if="ctrl.loggedIn" class="logout">
       <!-- LOG OUT BUTTON -->
         <button ng-click="ctrl.logOut()">Log Out</button>
     </div>
