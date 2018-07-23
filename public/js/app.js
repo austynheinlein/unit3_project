@@ -163,7 +163,6 @@ this.logOut = function(){
         }
       }).then(function(response){
         console.log(response)
-        controller.getProperties();
       }, function(error){
         console.log(error)
       })
