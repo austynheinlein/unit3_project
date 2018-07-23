@@ -169,6 +169,21 @@ this.logOut = function(){
       })
     }
 
+    // Remove one property from the user
+        this.dislikeProperty = function(property){
+          $http({
+            method: 'put',
+            url: '/properties/' + property._id + '/like',
+            data: {
+              property: property
+            }
+          }).then(function(response){
+            console.log(response)
+          }, function(error){
+            console.log(error)
+          })
+        }
+
 
     // Update logic
         this.updateProperty = function(property){
