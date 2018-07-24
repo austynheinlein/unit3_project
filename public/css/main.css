@@ -301,3 +301,9 @@ h1 {
   justify-content: flex-start;
   background: white;
 }
+/*********************************/
+/* descript */
+/*********************************/
+.descript input[type=text] {
+  padding-bottom: 50px;
+}
