@@ -8,9 +8,14 @@ app.controller('MyController', ['$http', function($http){
   this.noShow = true;
   this.loggedOut =true;
   this.noCurrentUserPage = true;
+  this.usernamePlaceholder = 'username'
+  this.passwordPlaceholder = 'password'
 
   if(this.loggedOut === true){
     this.noCurrentUserPage = true;
+    this.usernamePlaceholder = 'username'
+    this.passwordPlaceholder = 'password'
+
   }
 
 
