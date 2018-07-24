@@ -8,13 +8,13 @@ app.controller('MyController', ['$http', function($http){
   this.noShow = true;
   this.loggedOut =true;
   this.noCurrentUserPage = true;
-  this.usernamePlaceholder = 'username'
-  this.passwordPlaceholder = 'password'
+  controller.logInUsername = '';
+  controller.logInPassword = '';
+  controller.createUsername = '';
+  controller.createPassword = '';
 
   if(this.loggedOut === true){
     this.noCurrentUserPage = true;
-    this.usernamePlaceholder = 'username'
-    this.passwordPlaceholder = 'password'
 
   }
 
@@ -61,6 +61,8 @@ app.controller('MyController', ['$http', function($http){
     }).then(function(response){
       console.log(response);
       controller.getUser()
+      controller.createUsername = '';
+      controller.createPassword = '';
     })
   }
 
@@ -109,6 +111,10 @@ this.logOut = function(){
         controller.loggedIn = !controller.loggedIn
         console.log(response)
         controller.loggedOut = !controller.loggedOut
+        controller.username = 'hi'
+        controller.password = 'hi'
+        controller.logInUsername = '';
+        controller.logInPassword = '';
       },
       function(error){
         console.log(error);
@@ -139,6 +145,16 @@ this.logOut = function(){
           controller.getProperties();
           controller.toggleCreateModal();
           console.log('success!');
+          controller.image = '';
+          controller.rent = '';
+          controller.sqft = '';
+          controller.address = '';
+          controller.beds = '';
+          controller.baths = '';
+          controller.city = '';
+          controller.state = '';
+          controller.zip = '';
+          controller.descript  = '';
           // console.log('hi')
       })
   }
@@ -232,6 +248,16 @@ this.logOut = function(){
             console.log('hi')
             console.log(response)
             controller.toggleModal();
+            controller.image = '';
+            controller.rent = '';
+            controller.sqft = '';
+            controller.address = '';
+            controller.beds = '';
+            controller.baths = '';
+            controller.city = '';
+            controller.state = '';
+            controller.zip = '';
+            controller.descript  = '';
           })
         }
     // Click for show page
