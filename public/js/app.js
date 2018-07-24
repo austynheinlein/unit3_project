@@ -113,6 +113,7 @@ this.logOut = function(){
 
 //CREATE PROPERTIES
   this.createProperty = function(){
+    console.log('creatiiingggg...');
       $http({
           method:'POST',
           url:'/properties',
@@ -126,12 +127,13 @@ this.logOut = function(){
             city: this.city,
             state: this.state,
             zip: this.zip,
-            description: this.description
+            description: this.descript
           }
       }).then(function(response){
           document.getElementById("createProperty").reset()
           controller.getProperties();
           controller.toggleCreateModal();
+          console.log('success!');
           // console.log('hi')
       })
   }
@@ -217,7 +219,7 @@ this.logOut = function(){
                 city: this.city,
                 state: this.state,
                 zip: this.zip,
-                description: this.description
+                description: this.descript
             }
           }).then(function(response){
             console.log(response)

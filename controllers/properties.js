@@ -12,6 +12,7 @@ router.get('/', (req, res) => {
 
 //create
 router.post('/', (req, res) => {
+  console.log('i made a house');
   Property.create(req.body, (err, createdProperty) => {
     res.json(createdProperty)
   })
