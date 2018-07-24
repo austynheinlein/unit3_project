@@ -47,20 +47,17 @@ app.controller('MyController', ['$http', function($http){
 
 //CREATE USER
   this.createUser = function(){
-    document.getElementById("createUser").reset()
-    document.getElementById("loggedInUser").reset()
     console.log('function working');
     $http({
       method: 'POST',
       url: '/users',
       data: {
-        username: this.username,
-        password: this.password,
+        username: this.createUsername,
+        password: this.createPassword,
         properties: []
       }
     }).then(function(response){
       console.log(response);
-      controller.getUser()
       controller.createUsername = '';
       controller.createPassword = '';
     })

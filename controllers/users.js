@@ -35,7 +35,7 @@ router.get('/seed', (req, res) => {
   });
   User.create(seed, (err, createdUsers) => {
     console.log(createdUsers);
-    res.redirect('/');
+    res.json(createdUsers)
   });
 });
 
