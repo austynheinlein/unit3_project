@@ -125,7 +125,8 @@ this.logOut = function(){
             baths: this.baths,
             city: this.city,
             state: this.state,
-            zip: this.zip
+            zip: this.zip,
+            description: this.description
           }
       }).then(function(response){
           document.getElementById("createProperty").reset()
@@ -215,7 +216,8 @@ this.logOut = function(){
                 baths: this.baths,
                 city: this.city,
                 state: this.state,
-                zip: this.zip
+                zip: this.zip,
+                description: this.description
             }
           }).then(function(response){
             console.log(response)

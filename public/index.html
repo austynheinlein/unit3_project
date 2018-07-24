@@ -38,6 +38,7 @@
         <input type="text" ng-model="ctrl.state" placeholder="{{ctrl.property.state}}"/>
         <!-- <br/> -->
         <input type="text" ng-model="ctrl.zip" placeholder="{{ctrl.property.zip}}"/>
+        <input type="text" ng-model="ctrl.description" placeholder="{{ctrl.property.description}}"/>
       </div>
       <!-- <br/> -->
       <div class="modalBtns">
@@ -74,6 +75,7 @@
               <input type="text" ng-model="ctrl.state" placeholder="state"/>
               <!-- <br/> -->
               <input type="text" ng-model="ctrl.zip" placeholder="zip"/>
+              <input type="text" ng-model="ctrl.description" placeholder="description"/>
             </div>
             <!-- <br/> -->
             <div class="modalBtns">
@@ -100,7 +102,7 @@
 
         <!-- DISPLAY LISTING AND DELETE FUNCTIONALITY -->
         <div ng-if="ctrl.noCurrentUserPage" class="propertyImages">
-        
+
           <div class="favs">
             <h1>Current Listings</h1>
           </div>
